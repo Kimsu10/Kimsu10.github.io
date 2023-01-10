@@ -96,10 +96,10 @@ social:
 
 # Analytics
 analytics:
-  provider: false # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider: "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id:
-    anonymize_ip: # true, false (default)
+    tracking_id: "G-58GSRHN7T8"
+    anonymize_ip: false # true, false (default)
 
 # Site Author
 author:
@@ -275,7 +275,6 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
       author_profile: true
       read_time: true
       comments: true
