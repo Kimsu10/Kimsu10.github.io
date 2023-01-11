@@ -1,7 +1,8 @@
 ---
 title: "마크다운 문법 공부"
 layout: single
-categories: etc
+categories: BLOG
+toc: true
 ---
 
 블로그 글을 쓰는데 마크다운언어는 필수이기 때문에 첫 공부를로 쓰고 싶었다.
