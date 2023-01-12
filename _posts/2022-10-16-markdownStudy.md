@@ -1,7 +1,7 @@
 ---
 title: "마크다운 문법 공부"
-layout: single
-categories: Blog
+layout: categories
+permalink: /blog/
 toc: true
 author_profile: false
 sidebar:
