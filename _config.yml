@@ -104,24 +104,24 @@ analytics:
 # Site Author
 author:
   name: "Kimsu"
-  avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar: "/assets/images/profileImage.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio: "thinking."
   location: "South Korea"
-  email: "betnwjd25@gmail.com"
+  #email: "betnwjd25@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:betnwjd25@email.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://kimsu10.github.io"
+      #url: "https://kimsu10.github.io"
       # url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Kimsu10"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/kimsyususu"
+      #url: "https://instagram.com/kimsyususu"
 
 # Site Footer
 footer:
