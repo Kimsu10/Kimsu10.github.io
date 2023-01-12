@@ -1,9 +1,24 @@
 ---
 title: "마크다운 문법 공부"
 layout: single
-categories: BLOG
+categories: Blog
 toc: true
+author_profile: false
+sidebar:
+  nav: "docs"
 ---
+
+**[페이지이동]**[나의 깃허브페이지](https://github.com/Kimsu10)
+{: .notice--warning}
+
+<div class="notice--success">
+<hi>"연습용"</hi>
+<ul>
+<li>틀린것이 있다면 댓글로 알려주세요.</li>
+<li>블로그 만드는거 어려운데 재밌다.</li>
+<li>얼른 블로그에 글 써보고 싶다.</li>
+</ul>
+</div>
 
 블로그 글을 쓰는데 마크다운언어는 필수이기 때문에 첫 공부를로 쓰고 싶었다.
 
@@ -197,3 +212,5 @@ img src = "이미지 주소|URL" width ="이미지 크기"
 
 - [ ] 기타치기
 - [x] 블로그 공부하기
+
+[메인으로](https://kimsu10.github.io){: btn .btn--danger}

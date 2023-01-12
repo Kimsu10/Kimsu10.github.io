@@ -265,3 +265,4 @@ defaults:
       show_date: true
       future: true
       date_format: "%Y-%m-%d"
+      sidebar: true
