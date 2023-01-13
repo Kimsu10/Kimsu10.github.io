@@ -3,9 +3,8 @@ title: "마크다운 문법 공부"
 layout: single
 categories: Blog
 toc: true
-author_profile: false
-sidebar:
-  nav: "docs"
+#sidebar:
+#  nav: "docs"
 ---
 
 **[페이지이동]**[나의 깃허브페이지](https://github.com/Kimsu10)
@@ -20,7 +19,7 @@ sidebar:
 </ul>
 </div>
 
-블로그 글을 쓰는데 마크다운언어는 필수이기 때문에 첫 공부를로 쓰고 싶었다.
+블로그 글을 쓰는데 마크다운언어는 필수이기 때문에 첫 공부글로 쓰고 싶었다.
 
 # 1.제목
 

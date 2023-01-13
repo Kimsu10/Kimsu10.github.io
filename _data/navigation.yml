@@ -18,8 +18,8 @@ docs:
         url: /replit/
       - title: "JavaScript"
         url: /javascript/
-      - title: "TypeScript"
-        url: /typescript/
+      #- title: "TypeScript"
+      #  url: /typescript/
   - title: "backEnd"
     children:
       - title: "Nodejs"
@@ -28,14 +28,14 @@ docs:
         url: /nestjs/
   - title: "Git&GitHub"
     children:
-      - title: "Git"
-        url: /git/
-      - title: "GitHub"
-        url: /github/
+      - title: "Git&GitHub"
+        url: /git&github/
       - title: "Blog"
         url: /blog/
   - title: "FrontEnd"
     children:
+      - title: "Html"
+        url: /html/
       - title: "Css"
         url: /css/
       - title: "React"
@@ -44,7 +44,6 @@ docs:
     children:
       - title: "error"
         url: /error/
-      - title: ""
       - title: "wecode"
         url: /wecode/
   # - title: "About"

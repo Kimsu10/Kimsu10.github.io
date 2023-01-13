@@ -1,9 +1,11 @@
 ---
 layout: single
 title: "블로그 로컬호스트를 만들며 겪은 에러"
-categories: "github"
-tags: [github, blog, error]
-search: false
+categories: Blog
+tags: [blog, github, error]
+#search: false
+sidebar_main: true
+author_profile: true
 ---
 
 깃허브 블로그에 첫글을 쓰는것까지는 쉬웠지만 로컬호스트를 연결하는데서 정말 많은 시간이 걸렸다.

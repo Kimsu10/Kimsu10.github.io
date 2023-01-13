@@ -18,7 +18,7 @@ minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon"
 locale: "ko-KR"
 title: "zlatnote"
 title_separator: "|"
-subtitle: "일단 지르고 보자."
+subtitle: "사소한것들도 일단 노트에 쓰자"
 name: "Kimsu"
 description: "Experiencing a lot of errors."
 url: "https://Kimsu10.github.io"
@@ -105,7 +105,7 @@ analytics:
 author:
   name: "Kimsu"
   avatar: "/assets/images/profileImage.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio: "thinking."
+  bio: "에러는 흙과같고 물이며 산이다."
   location: "South Korea"
   #email: "betnwjd25@gmail.com"
   links:
@@ -236,6 +236,7 @@ jekyll-archives:
   enabled:
     - categories
     - tags
+
   layouts:
     category: archive-taxonomy
     tag: archive-taxonomy
@@ -257,6 +258,7 @@ defaults:
       path: ""
       type: posts
     values:
+      values: single
       author_profile: true
       read_time: false
       comments: true
@@ -265,4 +267,4 @@ defaults:
       show_date: true
       future: true
       date_format: "%Y-%m-%d"
-      sidebar: true
+      sidebar_main: true
