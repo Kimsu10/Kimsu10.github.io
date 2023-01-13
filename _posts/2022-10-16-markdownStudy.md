@@ -1,10 +1,10 @@
 ---
-title: "마크다운 문법 공부"
 layout: single
-categories: Blog
+title: "마크다운 문법 공부"
+layout: categories
+permalink: categories/Blog
 toc: true
-#sidebar:
-#  nav: "docs"
+sidebar_main: true
 ---
 
 **[페이지이동]**[나의 깃허브페이지](https://github.com/Kimsu10)
