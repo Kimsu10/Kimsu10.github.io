@@ -1,8 +1,7 @@
 ---
 layout: single
 title: "마크다운 문법 공부"
-layout: categories
-permalink: categories/Blog
+categories: Blog
 toc: true
 sidebar_main: true
 ---

@@ -7,45 +7,6 @@ main:
   - title: "Search"
     url: /search/
 
-docs:
-  - title: "CS"
-    children:
-      - title: "Basic"
-        url: /basic/
-  - title: "JAVASCRIPT"
-    children:
-      - title: "Rplit"
-        url: /replit/
-      - title: "JavaScript"
-        url: /javascript/
-      #- title: "TypeScript"
-      #  url: /typescript/
-  - title: "backEnd"
-    children:
-      - title: "Nodejs"
-        url: /nodejs/
-      - title: "Nestjs"
-        url: /nestjs/
-  - title: "Git&GitHub"
-    children:
-      - title: "Git&GitHub"
-        url: /git&github/
-      - title: "Blog"
-        url: /blog/
-  - title: "FrontEnd"
-    children:
-      - title: "Html"
-        url: /html/
-      - title: "Css"
-        url: /css/
-      - title: "React"
-        url: /react/
-  - title: "Etc"
-    children:
-      - title: "error"
-        url: /error/
-      - title: "wecode"
-        url: /wecode/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
