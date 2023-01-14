@@ -5,6 +5,8 @@ categories: JavaScript
 tag: javascript
 sidebar_main: true
 author_profile: true
+toc: true
+toc_stickty: true
 ---
 
 # JavaScript의 데이터타입의 종류

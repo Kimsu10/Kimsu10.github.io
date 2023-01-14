@@ -2,8 +2,9 @@
 layout: single
 title: "블로그 로컬호스트를 만들며 겪은 에러"
 categories: Blog
-tags: [blog, github, error]
-#search: false
+tags: blog, github, error
+toc: true
+toc_sticky: true
 sidebar_main: true
 author_profile: true
 ---
@@ -12,7 +13,7 @@ author_profile: true
 지금보면 간단한거같은데 당시에는 정말 많이 헤맸다.
 거의 다 해결한거같지만 앞으로의 과정을 써볼까 한다.
 
-## rbenv 설치 에러
+# rbenv 설치 에러
 
 ruby 가상환경을 설치하고 모든 문제가 풀리는 줄알았다.
 
@@ -87,7 +88,7 @@ export PATH={$Home}/.rbenv/bin:$PATH && \
 eval "$(rbenv init -)"
 ```
 
-## jekyll 설치 에러
+# jekyll 설치 에러
 
 1. `gem install jekyll` 를 입력하여 jekyll를 설치.
 
@@ -228,7 +229,9 @@ sj@gimsujeong-ui-MacBookPro Kimsu10.github.io %
 
 webrick을 로드 하지 못했다고한다.
 
-## Jekyll 4.2.0 Please append --trace to the serve command for any additional information or backtrace....cannot load such file -- webrick(loadError)
+# webvrick 로드 에러
+
+> Jekyll 4.2.0 Please append --trace to the serve command for any additional information or backtrace....cannot load such file -- webrick(loadError)
 
 4.`bundle add webrick` 입력.
 ruby 3.0.0 부터 webrick이 기본으로 포함된 gem에서 빠졌기 때문에 `bundle add webrick` 으로 webrick을 추가해주어야 했다.
@@ -310,7 +313,7 @@ To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
 
 ---
 
-## 느낀점
+# 느낀점
 
 루비에서 발생한 오류만 해결하면 다 해결된다고 생각했으나 결국 이글에 쓰인 에러 해결하는데만 하루를 바쳤다.
 처음에는 brew설치부터 시작해서 에러가 났고, 루비 가상버전도 안만들어졌다.
