@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "블로그 로컬호스트를 만들며 겪은 에러"
+title: "블로그 로컬호스트 에러"
 categories: Blog
 tags: blog, github, error
 toc: true
