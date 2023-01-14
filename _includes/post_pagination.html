@@ -8,7 +8,7 @@ prev_post or next_post %}
 <nav class="pagination_prev_next">
   {% if prev_post %}
   <a href="{{ prev_post.url }}" class="pagination_prev_next--pager"
-    ><span class="prev_next">Prev Post: &nbsp</span>{{ prev_post.title }}</a
+    ><span class="prev_next">Prev: &nbsp</span>{{ prev_post.title }}</a
   >
   {% else %}
   <a href="#" class="pagination_prev_next--pager disabled-first-child"
@@ -16,7 +16,7 @@ prev_post or next_post %}
   >
   {% endif %} {% if next_post %}
   <a href="{{ next_post.url }}" class="pagination_prev_next--pager"
-    ><span class="prev_next">Next Post: &nbsp </span>{{ next_post.title }}</a
+    ><span class="prev_next">Next: &nbsp </span>{{ next_post.title }}</a
   >
   {% else %}
   <a href="#" class="pagination_prev_next--pager disabled-last-child"
