@@ -79,7 +79,7 @@
       line-height: 1.5;
       text-align: center;
       text-decoration: none;
-      color: $muted-text-color;
+      color: blue; //$muted-text-color;
       border: 1px solid mix(#000, $border-color, 25%);
       border-radius: 0;
 
@@ -127,7 +127,7 @@
     height: 3em;
     margin-top: 2em;
     display: block;
-    padding-top: 0.6em;
+    padding-top: 0.7em;
     float: left;
     width: 50%;
     font-family: $sans-serif;
