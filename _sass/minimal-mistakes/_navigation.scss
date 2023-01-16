@@ -528,6 +528,8 @@
      ========================================================================== */
 
 .toc {
+  position: fixed;
+  margin-top: -4em;
   font-family: $sans-serif-narrow;
   color: $gray;
   background-color: $background-color;
