@@ -2,7 +2,7 @@
 layout: single
 title: "블로그 로컬호스트 에러"
 categories: Blog
-tags: blog, github, error
+tags: [jekyll, github, error]
 toc: true
 toc_sticky: true
 sidebar_main: true
