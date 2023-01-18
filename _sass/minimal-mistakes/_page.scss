@@ -66,7 +66,7 @@ body {
       clear: both;
     }
     .page__taxonomy {
-      margin-top: 10px; //태그롸 카테고리 간격 조절
+      margin-top: 10px; //태그와 카테고리 간격 조절
     }
     .page__date {
       margin-top: 10px; //태그랑 날짜 간격 조절
@@ -358,7 +358,6 @@ body {
 }
 
 .page__taxonomy-item-tag {
-  display: inside;
   margin-right: 5px;
   margin-bottom: 8px;
   font-size: 16px;

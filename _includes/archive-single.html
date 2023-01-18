@@ -19,7 +19,7 @@
     {% endif %}
     <h2 class="archive__item-title" itemprop="headline">
       {% if post.date %}
-      <p class="page__meta"> <a class="cateUrl" href="{{ category.link }}"><i class="fas fa-clipboard-list"> {{ post.categories }}</i></a> &nbsp; &nbsp;<i class="far fa-calendar" aria-hidden="true"></i> {{ post.date | date: "%Y.%m.%d" }}</p>
+      <p class="page__meta"> <a class="cateUrl" href="{{ past.categories }}"><i class="fas fa-clipboard-list"> {{ post.categories }}</i></a> &nbsp; &nbsp;<i class="far fa-calendar" aria-hidden="true"></i> {{ post.date | date: "%Y.%m.%d" }}</p>
       {% endif %}
       {% if post.link %}
         <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
