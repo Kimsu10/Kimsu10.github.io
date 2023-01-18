@@ -105,7 +105,7 @@ analytics:
 author:
   name: "Kimsu"
   avatar: "/assets/images/profileImage.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio: "에러는 흙과같고 물이며 산이다."
+  bio: "에러는 흙과 같고 물이며 산이다."
   location: "South Korea"
   #email: "betnwjd25@gmail.com"
   links:
