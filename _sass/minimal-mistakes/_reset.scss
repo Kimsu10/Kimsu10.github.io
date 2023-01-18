@@ -13,7 +13,7 @@ html {
   font-size: 18px;
 
   @include breakpoint($medium) {
-    font-size: 19px;
+    font-size: 18px;
   }
 
   @include breakpoint($large) {

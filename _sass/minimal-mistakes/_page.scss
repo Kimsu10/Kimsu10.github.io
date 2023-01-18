@@ -49,7 +49,7 @@ body {
 
   .page__inner-wrap {
     float: left;
-    margin-top: 3.7em;
+    margin-top: 3.7em; //toc 높이 조절
     margin-left: 0;
     margin-right: 0;
     width: 100%;
@@ -64,6 +64,12 @@ body {
       margin-right: 0;
       width: 100%;
       clear: both;
+    }
+    .page__taxonomy {
+      margin-top: 10px; //태그롸 카테고리 간격 조절
+    }
+    .page__date {
+      margin-top: 10px; //태그랑 날짜 간격 조절
     }
   }
 }
@@ -362,6 +368,20 @@ body {
   border-radius: $border-radius;
   background-color: rgb(13, 170, 255);
   color: white;
+  &:hover {
+    text-decoration: none;
+    color: white;
+    background-color: $link-color-hover;
+  }
+}
+
+.p-category {
+  display: inside;
+  font-size: 16px;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
   &:hover {
     text-decoration: none;
     color: white;
