@@ -62,11 +62,7 @@ breadcrumbs.html %} {% endunless %} {% endif %}
             {% include toc.html sanitize=true html=content h_min=1 h_max=6
             class="toc__menu" skip_no_ids=true %}
           </nav>
-          <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
-          <script>addBackToTop({
-  diameter: 56,
-  backgroundColor: 'rgb(255, 82, 82)',
-  textColor: '#fff'})</script>
+     
         </aside>
         {% endif %} {{ content }} {% if page.link %}
         <div>
