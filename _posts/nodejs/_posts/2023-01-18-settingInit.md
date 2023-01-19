@@ -1,10 +1,10 @@
 ---
 layout: single
-title: "초기세팅"
+title: "초기설정(0)"
 categories: Nodejs
 author_profile: true
 sidebar_main: true
-tag: setting
+tag: [setting, git, json, npm]
 toc: true
 toc_stickty: true
 ---
@@ -34,18 +34,18 @@ toc_stickty: true
 처음 폴더를 만들었을때 위 명령어를 입력하면 비어있으나 복사한 url을 연결하였다면 아래의 사진처럼 뜰 것이다.
 ![](https://velog.velcdn.com/images/kimsu10/post/222bca0f-85f7-4227-9ff3-818654b040b8/image.png)
 
-# 3. package.json을 만들기
+## 3. package.json을 만들기
 
 `touch package.json`으로 만들수도 있지만 수동으로 만들면 에러가 날 가능성이 높으므로 npm을 써서 만들자.
 
-> ## json(JavaScript Obnect Notation)이란?
+> ### json(JavaScript Obnect Notation)이란?
 >
 > 제이슨은 프로그래머가 파일에 정보를 저장하기 위해서만든 방식중 하나로 데이터를 교환하기 쉬워 많이 사용하는 표현식이다. JS를 통해 json의 내용을 JS의 객체로 변환하며, 단순한 데이터 포맷으로 데이터를 표시하는 방법이다.
 
 nodejs에서 이름은 무조건 package.json이여야한다.
 `touch package.json`으로 만들수도 있으나 에러날 수 있으므로 다른방법으로 만들었었다.
 
-# 4. npm init
+## 4. npm init
 
 `npm init`을 하면 package.json파일 만드는것을 도와준다.
 갑자기 내게 입력을 요구하는게 당황스러워서 망설여지겠지만 package.json안의 내용은 언제든지 고칠 수 있으므로 편하게 쓰면된다.
@@ -64,13 +64,13 @@ license: (ISC)
 순으로 작성하면 완성되었냐며Is this OK?(Yes)라고 뜬다. enter키를 누르면 아래의 사진처럼 만들어준다.
 ![](https://velog.velcdn.com/images/kimsu10/post/67f3b066-16ab-480d-a655-e2bf16c5ad11/image.png)
 
-> ## scripts란?
+> ### scripts란?
 >
 > scripts: 실행하고싶은 것
 
 ![](https://velog.velcdn.com/images/kimsu10/post/7389512f-23ed-459e-804e-1db5675d2546/image.png)
 
-# 5. index.js만들기
+## 5. index.js만들기
 
 `touch index.js`를 입력하거나 화면왼쪽상단의 ![](https://velog.velcdn.com/images/kimsu10/post/c4c2dcc6-1c0a-447a-bed1-06e7f76311a1/image.png)을 눌러 index.js파일을 만들어주자.
 

@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .archive {
-  margin-top: 3.6em;
+  //margin-top: 3.6em;
   margin-bottom: 2em;
 
   @include breakpoint($large) {
@@ -34,7 +34,7 @@
 }
 
 .archive__subtitle {
-  margin: 1.7em 0 0.5em;
+  margin: 1.2em 0 0.5em;
   padding-bottom: 0.8em;
   font-size: $type-size-4;
   color: $muted-text-color;
@@ -217,7 +217,7 @@
   }
 
   .archive__item-title {
-    margin-top: 0.5em;
+    //margin-top: 0.5em;
     font-size: $type-size-5;
   }
 

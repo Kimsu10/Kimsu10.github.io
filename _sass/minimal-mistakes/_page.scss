@@ -4,6 +4,7 @@
 
 #main {
   @include clearfix;
+  //margin-top: 3em; //toc때문에 0에서 3으로 바꿈
   margin-left: auto;
   margin-right: auto;
   padding-left: 1em;
@@ -49,7 +50,7 @@ body {
 
   .page__inner-wrap {
     float: left;
-    margin-top: 0.3em; //toc 높이 조절
+    margin-top: 0; //toc 높이 조절
     margin-left: 0;
     margin-right: 0;
     width: 100%;
@@ -66,16 +67,15 @@ body {
       clear: both;
     }
     .page__taxonomy {
-      margin-top: 10px; //태그와 카테고리 간격 조절
+      margin-top: 15px; //태그와 카테고리 간격 조절
     }
     .page__date {
-      margin-top: 10px; //태그랑 날짜 간격 조절
+      margin-top: 15px; //태그랑 날짜 간격 조절
     }
   }
 }
 
 .page__title {
-  margin-top: 0;
   line-height: 1;
 
   a {
@@ -281,6 +281,7 @@ body {
 
 .page__share {
   margin-top: 2em;
+  margin-bottom: 1em;
   padding-top: 1em;
   border-top: 1px solid $border-color;
 
