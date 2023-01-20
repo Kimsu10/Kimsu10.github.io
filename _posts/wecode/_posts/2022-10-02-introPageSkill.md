@@ -7,28 +7,35 @@ toc: true
 toc_sticky: true
 ---
 
-과제: 자기소개 페이지에 구현한 기능을 하나 선정하여 작성한 코드를 설명하기
-html과 css 모두 처음이였기에 간단한 코드로만 구현해서 무엇을 써야하나 고민하다 반응이 좋았다고 생각한 transform의 translate를 선택했습니다.
+> # 과제: 자기소개 페이지에 구현한 기능을 하나 선정하여 작성한 코드를 설명하기.
+>
+> html과 css 모두 처음이였고 기초적인것밖에 공부하지못하여 무엇을 써야하나 고민했습니다.
+> 기초적이지만 꾸몄을때 팀원들이 반응이 좋았던 transform의 translate를 선택했습니다.
 
-아래는 제가 transform을 사용하여 만든 페이지와 코드입니다.
+아래는 제가 transform을 적용한 페이지와 코드입니다.
 
 ![](https://velog.velcdn.com/images/kimsu10/post/090aca69-88fa-4173-9445-c824e44ec2ca/image.gif)
 
 **HTML**
 
-```
-<h1 class="main-comment"><i class="eng">Hello!</i> 안녕하세요!<br/>
-            <i class="eng">I'm SUJEONG.</i> <i class="highlight">자가지능<i class="back-h">김수정</i> </i> 입니다.<br>
-            </h1>
-            <p class = "detail-comment">Think from various perspectives and Communicate.<br/>
-            I wanna be a <i class="highlight0">BACK-END </i> Developer who want to be with. <br/>
-            <i class="highlight1">다양하게 생각하고 소통하여 </i><i class="highlight2">[함께 하고싶은 개발자] </i> 가 되고싶습니다. </p>
-
+```html
+<h1 class="main-comment">
+  <i class="eng">Hello!</i> 안녕하세요!<br />
+  <i class="eng">I'm SUJEONG.</i>
+  <i class="highlight">자가지능<i class="back-h">김수정</i> </i> 입니다.<br />
+</h1>
+<p class="detail-comment">
+  Think from various perspectives and Communicate.<br />
+  I wanna be a <i class="highlight0">BACK-END </i> Developer who want to be
+  with. <br />
+  <i class="highlight1">다양하게 생각하고 소통하여 </i
+  ><i class="highlight2">[함께 하고싶은 개발자] </i> 가 되고싶습니다.
+</p>
 ```
 
 **CSS**
 
-```
+```css
 .highlight0:hover{
    font-family: 'Gugi', cursive;
    color: hotpink;
@@ -39,7 +46,7 @@ html과 css 모두 처음이였기에 간단한 코드로만 구현해서 무엇
    border-radius: 10%;
 ```
 
-- css에서 커서가 강조하고 싶은 글자에 올라왔을때 문장의 내용이 바뀌게 하고싶었기에 hover에 변형(transform)을 이용하여 문장을 덮게만들었습니다.
+- css에서 커서가 강조하고 싶은 글자에 올라왔을때 문장의 내용이 바뀌게 하고싶었기에 hover에 변형(transform)을 이용하여 문장을 덮게만들었습니다.  
   배경색은 뒤의 글자를 가리고 싶어서 배경색과 일치하게 입력하였고 강조하고 싶은 글자들을 hotpink색으로 통일했습니다.
 - 글자가 부드럽게 움직이는것을 보여주기위해 transition-duration에 1초를 입력하였습니다.
 
@@ -47,8 +54,7 @@ html과 css 모두 처음이였기에 간단한 코드로만 구현해서 무엇
 
 # 1. transform
 
-transform은 html의 요소를 움직이거나(translate),회전(rotate),기울기(skew),크기를 변경(scale) 할 수있고, 2D와 3D의 변형도 줄 수 있습니다.
-아쉽게도 제가 사용한것은 translate와 scale뿐이지만, 활용도가 참 다양하다고 생각했습니다.
+transform은 html의 요소를 움직이거나(translate),회전(rotate),기울기(skew),크기를 변경(scale) 할 수있고, 2D와 3D의 변형도 줄 수 있었는데, 아쉽게도 현재의 제실력으로는 translate와 scale밖에 사용할수 없었습니다.하지만 활용도가 참 다양하게 생각나서 나중에 써보고싶습니다.
 
 # 2. translate()
 
@@ -124,4 +130,5 @@ transition은 요소를 부드럽게 움직이게하거나 애니메이션의 �
 <br/>
 <br/>
 
-** 잘못쓴게 있다면 알려주시면 감사하겠습니다.**
+**댓글기능 다른거로 만들려고 준비중입니다.**
+{: .notice--warning}
