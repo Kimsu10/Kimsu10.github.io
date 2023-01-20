@@ -64,3 +64,5 @@ peer dependency문제라고 생각해서 무시하고 설치해봤는데 안되�
 ![](https://velog.velcdn.com/images/kimsu10/post/7dde8ee9-9111-4472-a0f4-991631260abd/image.png)
 
 방법은 강제 설치뿐인것인가..일단 서버가 돌아가서 나중에 더 알게되면 추가 작성해야겠다.
+
+## 시도예정: npm uninstall로 날리고 다시 설치하기
