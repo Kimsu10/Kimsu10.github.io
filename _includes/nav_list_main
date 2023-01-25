@@ -11,7 +11,6 @@
       <li>
      
         <span class="nav__sub-title">CS</span>
-          
             <ul>
     
                 {% for category in site.categories %}
@@ -50,6 +49,20 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "MySQL" %}
+                        <li><a href="/categories/mysql" class="">MySQL ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "MongoDB" %}
+                        <li><a href="/categories/mongodb" class="">MongoDB ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
             <span class="nav__sub-title">GIT&GITHUB</span>
             <ul>
                 {% for category in site.categories %}
@@ -84,6 +97,14 @@
                 {% for category in site.categories %}
                     {% if category[0] == "React" %}
                         <li><a href="/categories/react" class="">React ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <span class="nav__sub-title">CloneCoding</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "wetube" %}
+                        <li><a href="/categories/firstclone" class="">wetube ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
