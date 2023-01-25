@@ -4,7 +4,7 @@ title: "초기설정(0)"
 categories: wetube
 author_profile: true
 sidebar_main: true
-tag: [setting, git, json, npm]
+tag: [setting, git, npm]
 toc: true
 toc_stickty: true
 ---
