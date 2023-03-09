@@ -6,6 +6,7 @@ author_profile: true
 sidebar_main: true
 toc: true
 toc_stickty: true
+tags: [MongoDB, mongoose, ORM, ODM]
 ---
 
 mongoose로 클론코딩을하다가 비슷한 기능을 하는 두 메소드를 발견했다.  
