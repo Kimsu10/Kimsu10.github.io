@@ -2,7 +2,7 @@
 layout: single
 title: "Javascript의 Datatype"
 categories: JavaScript
-tag: javascript
+tag: JS
 sidebar_main: true
 author_profile: true
 toc: true
