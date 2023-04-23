@@ -15,7 +15,7 @@
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
 
-  @include breakpoint($xx-large) {
+  @include breakpoint($x-large) {
     max-width: $max-width;
   }
 }
@@ -366,7 +366,7 @@ body {
   text-decoration: none;
   border: 1px solid $border-color;
   border-radius: $border-radius;
-  background-color: rgb(13, 170, 255);
+  background-color: rgb(76, 172, 251);
   color: white;
   &:hover {
     text-decoration: none;
