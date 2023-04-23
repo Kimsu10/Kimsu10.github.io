@@ -23,12 +23,10 @@ figure.highlight {
 .highlight table {
   margin-bottom: 0;
   font-size: 1em;
-  border: 0;
 
   td {
     padding: 0;
     width: calc(100% - 1em);
-    border: 0;
 
     /* line numbers*/
     &.gutter,
@@ -318,7 +316,8 @@ figure.highlight {
 }
 
 .gist {
-  th, td {
+  th,
+  td {
     border-bottom: 0;
   }
 }
