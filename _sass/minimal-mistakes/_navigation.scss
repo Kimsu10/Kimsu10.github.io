@@ -147,6 +147,7 @@
 
     &:hover {
       @include yiq-contrasted($muted-text-color);
+      background-color: #3a7cf6;
     }
 
     &:first-child {

@@ -129,7 +129,7 @@ body {
 
   /* paragraph indents */
   p {
-    margin: 0 0 $indent-var;
+    margin: 0 0 1.4em; //$indent-var;
 
     /* sibling indentation*/
     @if $paragraph-indent == true {
@@ -154,7 +154,7 @@ body {
     padding-top: 0.1rem;
     padding-bottom: 0.1rem;
     font-size: 0.8em;
-    background: $code-background-color;
+    background: rgb(31, 103, 238); //$code-background-color;
     border-radius: $border-radius;
 
     &::before,
