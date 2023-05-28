@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "세션을 몽고디비에 연결하여 사용하기"
+title: "세션을 몽고디비에 연결하기"
 categories: MongoDB
 author_profile: true
 sidebar_main: true
