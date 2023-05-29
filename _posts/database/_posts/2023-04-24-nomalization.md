@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "데이터 정규화(추가정리필요)"
-categories: MySQL
+categories: Database
 author_profile: true
 sidebar_main: true
 toc: true

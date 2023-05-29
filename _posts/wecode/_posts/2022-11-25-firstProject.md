@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "첫 프로젝트 회고"
+title: "1차 프로젝트 회고"
 categories: wecode
 sidebar_main: true
 toc: true

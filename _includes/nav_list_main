@@ -19,18 +19,26 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-        <span class="nav__sub-title">JAVASCRIPT</span>
+            <ul>
+    
+                {% for category in site.categories %}
+                    {% if category[0] == "C" %}
+                        <li><a href="/categories/c" class=""> C ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        <span class="nav__sub-title">Language</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Replit" %}
-                        <li><a href="/categories/replit" class="">Replit ({{category[1].size}})</a></li>
+                    {% if category[0] == "JavaScript" %}
+                        <li><a href="/categories/javascript" class="">JavaScript ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "JavaScript" %}
-                        <li><a href="/categories/javascript" class="">JavaScript ({{category[1].size}})</a></li>
+                    {% if category[0] == "Java" %}
+                        <li><a href="/categories/java" class="">Java ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -58,33 +66,20 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "MySQL" %}
-                        <li><a href="/categories/mysql" class="">MySQL ({{category[1].size}})</a></li>
+                    {% if category[0] == "Database" %}
+                        <li><a href="/categories/database" class="">Database ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "MongoDB" %}
-                        <li><a href="/categories/mongodb" class="">MongoDB ({{category[1].size}})</a></li>
+                    {% if category[0] == "Base" %}
+                        <li><a href="/categories/backendBase" class="">Base ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
-            <span class="nav__sub-title">GIT&GITHUB</span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Git&GitHub" %}
-                        <li><a href="/categories/github" class="">Git&GitHub ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Blog" %}
-                        <li><a href="/categories/blog" class="">Blog ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
+            
+            
             <span class="nav__sub-title">FRONTEND</span>
             <ul>
                 {% for category in site.categories %}
@@ -107,14 +102,6 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            <span class="nav__sub-title">CloneCoding</span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "wetube" %}
-                        <li><a href="/categories/firstclone" class="">wetube ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
             <span class="nav__sub-title">ETC</span>
             <ul>
                 {% for category in site.categories %}
@@ -125,12 +112,25 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
+                    {% if category[0] == "Git&GitHub" %}
+                        <li><a href="/categories/github" class="">Git&GitHub ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                {% if category[0] == "Blog" %}
+                <li><a href="/categories/blog" class="">Blog ({{category[1].size}})</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
                     {% if category[0] == "wecode" %}
                         <li><a href="/categories/wecode" class="">wecode ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
-            
       </li>
   </ul>
 </nav>

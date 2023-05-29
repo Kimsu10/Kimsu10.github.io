@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "초기설정(0)"
-categories: wetube
+categories: Nodejs
 author_profile: true
 sidebar_main: true
 tag: [setting, git, npm]

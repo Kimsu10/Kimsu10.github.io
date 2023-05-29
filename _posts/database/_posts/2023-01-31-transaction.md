@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "트랜잭션"
-categories: MySQL
+categories: Database
 sidebar_main: true
 toc: true
 toc_sticky: true
