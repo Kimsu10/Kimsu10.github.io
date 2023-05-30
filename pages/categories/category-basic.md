@@ -1,7 +1,7 @@
 ---
 title: "Basic"
 layout: archive
-permalink: categories/Basic
+permalink: categories/basic
 author_profile: true
 sidebar_main: true
 ---
