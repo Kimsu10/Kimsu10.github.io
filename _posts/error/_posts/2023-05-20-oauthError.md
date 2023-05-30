@@ -17,6 +17,8 @@ author_profile: true
 
 ![](https://velog.velcdn.com/images/kimsu10/post/1003bfd0-2409-4b08-9fa1-acce29a0c5de/image.png)
 
+공식문서에서 찾아봐도 저 에러메세지는 찾지못했다.
+
 음...대체 왜 차단되는거지.. 비밀번호랑 ID랑 콜백주소까지 제대로 적어두었는데..
 
 일단 늦어서 기록만 해두자.
