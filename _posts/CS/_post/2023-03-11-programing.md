@@ -2,10 +2,9 @@
 layout: single
 title: "프로그래밍과 컴퓨팅적 사고"
 categories: Basic
-tags: 용어정리
 sidebar_main: true
 toc: true
-toc_stickty: true
+toc_sticky: true
 ---
 
 # 1. 프로그래밍
