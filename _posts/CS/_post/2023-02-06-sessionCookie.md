@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Session과 Cookie"
-categories: Html
+categories: Basic
 sidebar_main: true
 toc: true
 toc_stickty: true
@@ -12,10 +12,11 @@ toc_stickty: true
 > [npm express-session 사이트](https://www.npmjs.com/package/express-session)
 
 세션이란 백엔드와 브러우저 간에 어떤 활동을 헀는지 기록 또는 기억으로 브라우저와 백엔드사이의 메모리(히스토리)이다.  
-예를들어 내가 어떤 사이트에 로그인 중이라면 현재 사용하고있는 브라우저와 백엔드사이에 세션이 존재하고있다.(세션이 없으면 다시로그인해야한다.)  
+예를들어 내가 어떤 사이트에 로그인 중이라면 현재 사용하고있는 브라우저와 백엔드사이에 세션이 존재하고있다.  
+(세션이 없으면 다시로그인해야한다.)  
 세션이 작동하려면 백엔드와 브라우저가 서로에대한 정보를 가지고 있어야한다.  
 왜냐하면 로그인페이지에서 HTTP요청을 하면 요청이처리되고 연결이 끝나게되는데 그이후로는 백엔드도 브라우저도 아무것도 할 수 없게된다.  
-요청이처리되고 브라우저도 서버도 누가요청을 보냈는지 잊어버리게되는데 이것을stateless라고 한다.
+요청이처리되고 브라우저도 서버도 누가요청을 보냈는지 잊어버리게되는데 이것을 `stateless`라고 한다.
 
 > [**stateless공부글**](https://kimsu10.github.io/nodejs/Authentication&Authorization/#1-statelsess-server)  
 > stateless란 연결이 한번 되었고 끝나서 둘사이에 연결 state가 없는것이다.
@@ -28,8 +29,8 @@ toc_stickty: true
 
 ![](https://velog.velcdn.com/images/kimsu10/post/24e834cd-f331-4927-ae89-705ba9106091/image.png)
 
-내가 원하든 원하지 않든 브라우저를 새로고침할때마다 백엔드에서는 쿠키를 받고있다.  
-브라우저가 알아서 백엔드로 쿠키를 보내도록 되어있어서 새로고침을 할때마다 자동으로 생성된다.
+내가 원하든 원하지 않든 브라우저를 새로고침할때마다 백엔드에서는 쿠키를 받고있는데,
+브라우저가 자동으로 백엔드에 쿠키를 보내기때문에 새로고침을 할때마다 생성된다.
 
 ```js
 app.use((req, res, next) => {
