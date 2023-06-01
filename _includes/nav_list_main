@@ -119,9 +119,9 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                {% if category[0] == "Blog" %}
-                <li><a href="/categories/blog" class="">Blog ({{category[1].size}})</a></li>
-                {% endif %}
+                    {% if category[0] == "Question" %}
+                        <li><a href="/categories/question" class="">Question ({{category[1].size}})</a></li>
+                    {% endif %}
                 {% endfor %}
             </ul>
             <ul>
@@ -129,6 +129,13 @@
                     {% if category[0] == "wecode" %}
                         <li><a href="/categories/wecode" class="">wecode ({{category[1].size}})</a></li>
                     {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                {% if category[0] == "Blog" %}
+                <li><a href="/categories/blog" class="">Blog ({{category[1].size}})</a></li>
+                {% endif %}
                 {% endfor %}
             </ul>
       </li>
