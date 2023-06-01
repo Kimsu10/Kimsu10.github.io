@@ -12,7 +12,6 @@
      
         <span class="nav__sub-title">CS</span>
             <ul>
-    
                 {% for category in site.categories %}
                     {% if category[0] == "Basic" %}
                         <li><a href="/categories/basic" class="">Basic ({{category[1].size}})</a></li>
@@ -20,7 +19,6 @@
                 {% endfor %}
             </ul>
             <ul>
-    
                 {% for category in site.categories %}
                     {% if category[0] == "C" %}
                         <li><a href="/categories/c" class=""> C ({{category[1].size}})</a></li>
@@ -49,7 +47,7 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            <span class="nav__sub-title">BACKEND</span>
+        <span class="nav__sub-title">BACKEND</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Nodejs" %}
@@ -78,9 +76,7 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            
-            
-            <span class="nav__sub-title">FRONTEND</span>
+        <span class="nav__sub-title">FRONTEND</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Html" %}
@@ -102,7 +98,7 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            <span class="nav__sub-title">ETC</span>
+        <span class="nav__sub-title">ETC</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Error" %}
@@ -112,8 +108,8 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Git&GitHub" %}
-                        <li><a href="/categories/github" class="">Git&GitHub ({{category[1].size}})</a></li>
+                    {% if category[0] == "GitHub" %}
+                        <li><a href="/categories/github" class="">GitHub ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
