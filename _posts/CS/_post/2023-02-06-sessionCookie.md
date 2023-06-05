@@ -80,3 +80,5 @@ app.get("/random", (req, res, next) => {
 세션DB에있는 id와 쿠키에있는 id가 같도록 말이다.  
 그러면 브라우저가 해당 PORT의 모든 url에 요청을 보낼때마다 세션id를 요청할 것이다.  
 이제 백엔드는 DB에서 id를 검색하여 어떤 유저가 어떤브라우저에서 요청을 보냈는지 알 수 있다.
+
+![](https://velog.velcdn.com/images/kimsu10/post/3e2d5087-cf1f-4976-b185-fc072978a466/image.png)
