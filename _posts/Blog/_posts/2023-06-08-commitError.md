@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "github blog 잔디가 안심어지는 건에대하여"
+title: "github blog 잔디 안심어지는 문제"
 categories: Blog
 toc: true
 sidebar_main: true
