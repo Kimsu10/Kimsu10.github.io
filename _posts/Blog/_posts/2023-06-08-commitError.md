@@ -3,6 +3,7 @@ layout: single
 title: "github blog 잔디 안심어지는 문제"
 categories: Blog
 toc: true
+toc_stickty: true
 sidebar_main: true
 ---
 
