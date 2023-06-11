@@ -3,6 +3,7 @@ layout: single
 title: "마크다운 문법 공부"
 categories: Blog
 toc: true
+toc_stickty: true
 sidebar_main: true
 ---
 
