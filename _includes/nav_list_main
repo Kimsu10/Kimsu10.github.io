@@ -41,8 +41,8 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Programmers" %}
-                        <li><a href="/categories/programmers" class="">Programmers ({{category[1].size}})</a></li>
+                    {% if category[0] == "Python" %}
+                        <li><a href="/categories/python" class="">Python ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
