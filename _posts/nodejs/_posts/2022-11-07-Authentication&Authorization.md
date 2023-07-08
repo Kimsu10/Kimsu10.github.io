@@ -5,7 +5,7 @@ categories: Nodejs
 author_profile: true
 sidebar_main: true
 toc: true
-toc_stickty: true
+toc_sticky: true
 ---
 
 # 1. 인증(Authentication)

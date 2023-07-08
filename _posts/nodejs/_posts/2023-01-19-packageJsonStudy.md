@@ -6,7 +6,7 @@ author_profile: true
 sidebar_main: true
 tag: [setting, npm, json]
 toc: true
-toc_stickty: true
+toc_sticky: true
 ---
 
 학원에서 `npm init`을 치고 그냥 시키는대로만 만들고 말았는데

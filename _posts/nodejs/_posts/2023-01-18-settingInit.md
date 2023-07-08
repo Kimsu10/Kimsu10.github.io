@@ -6,7 +6,7 @@ author_profile: true
 sidebar_main: true
 tag: [setting, git, npm]
 toc: true
-toc_stickty: true
+toc_sticky: true
 ---
 
 # 1. 프로젝트를 진행 할 폴더를 만든다
