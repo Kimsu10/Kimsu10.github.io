@@ -4,6 +4,7 @@ title: "컴포넌트 분리하기"
 categories: React
 toc: true
 toc_sticky: true
+published: true
 ---
 
 리엑트 4일차인데 어제만든 컴포넌트중 하나를 분리하는 과제를 받았다.
