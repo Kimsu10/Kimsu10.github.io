@@ -266,5 +266,6 @@ defaults:
       related: false
       show_date: true
       future: true
+      published: true
       date_format: "%Y-%m-%d"
       sidebar_main: true
