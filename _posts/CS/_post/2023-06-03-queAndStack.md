@@ -5,7 +5,6 @@ categories: Basic
 sidebar_main: true
 toc: true
 toc_stickty: true
-published: false
 ---
 
 스택(stack)이란 쌓아 올린다는 것을 의미한다.
