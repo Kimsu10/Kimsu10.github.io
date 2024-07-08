@@ -6,7 +6,7 @@ author_profile: true
 sidebar_main: true
 tags: [setting, css]
 toc: true
-toc_stickty: true
+toc_sticky: true
 ---
 
 내가 기억하기로는 프론트분들이 싸스라고 했던거같은데 scss가 왜 sass인가 싶어서 검색해봤다.

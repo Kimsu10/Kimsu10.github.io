@@ -4,7 +4,7 @@ title: "큐와스택(다시 정리하기,비공개)"
 categories: Basic
 sidebar_main: true
 toc: true
-toc_stickty: true
+toc_sticky: true
 ---
 
 스택(stack)이란 쌓아 올린다는 것을 의미한다.

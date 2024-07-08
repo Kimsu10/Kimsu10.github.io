@@ -4,7 +4,7 @@ title: "web storage와 cookies"
 categories: Html
 sidebar_main: true
 toc: true
-toc_stickty: true
+toc_sticky: true
 ---
 
 # Web Storage Object

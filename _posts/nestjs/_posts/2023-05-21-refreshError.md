@@ -5,7 +5,7 @@ categories: Nestjs
 author_profile: true
 sidebar_main: true
 toc: true
-toc_stickty: true
+toc_sticky: true
 ---
 
 엑세스토큰과 리프레시 토큰을 공부하고 리프레시토큰을 사용한 로그인기능을 만들어보았다.  

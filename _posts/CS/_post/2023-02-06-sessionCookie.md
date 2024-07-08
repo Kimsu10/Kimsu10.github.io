@@ -4,7 +4,7 @@ title: "Session과 Cookie"
 categories: Basic
 sidebar_main: true
 toc: true
-toc_stickty: true
+toc_sticky: true
 ---
 
 # 1. Sessions

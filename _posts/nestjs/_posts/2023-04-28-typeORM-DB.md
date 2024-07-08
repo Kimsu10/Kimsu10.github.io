@@ -5,7 +5,7 @@ categories: Nestjs
 author_profile: true
 sidebar_main: true
 toc: true
-toc_stickty: true
+toc_sticky: true
 ---
 
 새로운 프로젝트를 시작하게되었다. (사실 아직 기획중이지만..)  
