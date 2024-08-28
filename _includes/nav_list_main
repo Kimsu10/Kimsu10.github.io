@@ -19,8 +19,8 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "C" %}
-                        <li><a href="/categories/c" class=""> C ({{category[1].size}})</a></li>
+                    {% if category[0] == "Linux" %}
+                        <li><a href="/categories/linux" class=""> C ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -43,6 +43,13 @@
                 {% for category in site.categories %}
                     {% if category[0] == "Python" %}
                         <li><a href="/categories/python" class="">Python ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "C" %}
+                        <li><a href="/categories/c" class=""> C ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
