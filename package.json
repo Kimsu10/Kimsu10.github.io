@@ -33,6 +33,7 @@
     "build:js": "npm run uglify && npm run add-banner"
   },
   "dependencies": {
+    "minimal-mistakes": "file:",
     "vanilla-back-to-top": "^7.2.1"
   }
 }
