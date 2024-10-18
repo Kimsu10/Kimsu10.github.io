@@ -53,6 +53,22 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+            <span class="nav__sub-title">AI</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "DeepLearning" %}
+                        <li><a href="/categories/DeepLearning" class="">DeepLearning ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Linux" %}
+                        <li><a href="/categories/linux" class=""> C ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
         <span class="nav__sub-title">BACKEND</span>
             <ul>
                 {% for category in site.categories %}
@@ -84,8 +100,8 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Java" %}
-                        <li><a href="/categories/java" class="">Java ({{category[1].size}})</a></li>
+                    {% if category[0] == "Spring" %}
+                        <li><a href="/categories/spring" class="">Spring ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
