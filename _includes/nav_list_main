@@ -105,6 +105,14 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+        <span class="nav__sub-title">DevOps</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "CI/CD" %}
+                        <li><a href="/categories/cd-cd" class="">CI/CD ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
         <span class="nav__sub-title">FRONTEND</span>
             <ul>
                 {% for category in site.categories %}
