@@ -20,7 +20,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Linux" %}
-                        <li><a href="/categories/linux" class=""> C ({{category[1].size}})</a></li>
+                        <li><a href="/categories/linux" class=""> Linux ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -63,8 +63,8 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Linux" %}
-                        <li><a href="/categories/linux" class=""> C ({{category[1].size}})</a></li>
+                    {% if category[0] == "MachineLearning" %}
+                        <li><a href="/categories/machineLearning" class=""> MachineLearning ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -108,8 +108,8 @@
         <span class="nav__sub-title">DevOps</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "CI/CD" %}
-                        <li><a href="/categories/cd-cd" class="">CI/CD ({{category[1].size}})</a></li>
+                    {% if category[0] == "DevOps" %}
+                        <li><a href="/categories/devOps" class="">CI/CD ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
