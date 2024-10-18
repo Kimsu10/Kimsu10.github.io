@@ -2,7 +2,7 @@
 layout: single
 title: "NodeJs는 동기일까 비동기일까"
 categories: Nodejs
-author_profile: true
+tags: NodeJs
 sidebar_main: true
 toc: true
 toc_sticky: true

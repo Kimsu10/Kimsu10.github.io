@@ -1,9 +1,9 @@
 ---
 layout: single
 title: "Express 초기환경세팅"
-author_profile: true
 sidebar_main: true
 categories: Nodejs
+tags: NodeJs
 toc: true
 toc_sticky: true
 ---
@@ -54,7 +54,7 @@ nodemon은 node에서 코드수정이 일어났을때 수정사항이 서버에 
 
 > [설치 방법](https://kimsu10.github.io/wetube/babel/#2-nodemon)
 >
-> `npm i nodemon --save-de`
+> `npm i nodemon --save-dev`
 
 npm을 사용하여 nodemon을 설치한다.  
 npm install 뒤에 `-g`를 붙임으로써 global 변수로 nodemon을 설치 할 수 있다.
@@ -64,7 +64,8 @@ npm install nodemon
 npm install -g nodemon
 ```
 
-설치 후 package.json 내부의 npm script start 명령어 란에 아래와 같이 새롭게 nodemon을 경유하여 app.js 를 실행한다는 의미의 명령어(`nodemon app.js`)를 추가해주면 `npm start` 명령어 만으로 nodemon을 실행할 수 있다.
+설치 후 package.json 내부의 npm script start 명령에 nodemon app.js를 추가한다.  
+이는 nodemon을 경유하여 app.js 를 실행한다는 의미의 명령어(`nodemon app.js`)를 추가해주면 `npm start` 명령어 만으로 nodemon을 실행할 수 있다.
 
 ```
 "scripts":{

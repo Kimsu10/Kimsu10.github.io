@@ -2,7 +2,7 @@
 layout: single
 title: "npm i canvas ERR:1"
 categories: Error
-tags: [nodejs, npm, err]
+tags: [NodeJs, NPM, ERROR]
 sidebar_main: true
 toc: true
 toc_sticky: true

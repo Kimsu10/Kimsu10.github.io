@@ -2,7 +2,7 @@
 layout: single
 title: "package.json 공부"
 categories: Nodejs
-author_profile: true
+tags: NodeJs
 sidebar_main: true
 tag: [setting, npm, json]
 toc: true

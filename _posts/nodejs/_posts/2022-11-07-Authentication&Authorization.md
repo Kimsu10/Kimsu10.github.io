@@ -2,7 +2,7 @@
 layout: single
 title: "인증과 인가"
 categories: Nodejs
-author_profile: true
+tags: NodeJs
 sidebar_main: true
 toc: true
 toc_sticky: true

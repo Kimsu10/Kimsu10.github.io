@@ -2,7 +2,7 @@
 layout: single
 title: "초기설정(0)"
 categories: Nodejs
-author_profile: true
+tags: NodeJs
 sidebar_main: true
 tag: [setting, git, npm]
 toc: true
