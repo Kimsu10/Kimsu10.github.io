@@ -160,7 +160,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Question" %}
-                        <li><a href="/categories/question" class="">Question ({{category[1].size}})</a></li>
+                        <li><a href="/categories/question" class="">면접 공부 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
