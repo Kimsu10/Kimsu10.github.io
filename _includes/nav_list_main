@@ -56,8 +56,15 @@
             <span class="nav__sub-title">AI</span>
             <ul>
                 {% for category in site.categories %}
+                    {% if category[0] == "Visualization" %}
+                        <li><a href="/categories/visualization" class="">Visualization ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>            
+            <ul>
+                {% for category in site.categories %}
                     {% if category[0] == "DeepLearning" %}
-                        <li><a href="/categories/DeepLearning" class="">DeepLearning ({{category[1].size}})</a></li>
+                        <li><a href="/categories/deepLearning" class="">DeepLearning ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -68,7 +75,28 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-
+        <span class="nav__sub-title">DATABASE</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Database" %}
+                        <li><a href="/categories/database" class="">Database ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "MySQL" %}
+                        <li><a href="/categories/mysql" class="">MySQL ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "MongoDB" %}
+                        <li><a href="/categories/mongoDB" class="">MongoDB ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
         <span class="nav__sub-title">BACKEND</span>
             <ul>
                 {% for category in site.categories %}
@@ -81,13 +109,6 @@
                 {% for category in site.categories %}
                     {% if category[0] == "Nestjs" %}
                         <li><a href="/categories/nestjs" class="">Nestjs ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Database" %}
-                        <li><a href="/categories/database" class="">Database ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
