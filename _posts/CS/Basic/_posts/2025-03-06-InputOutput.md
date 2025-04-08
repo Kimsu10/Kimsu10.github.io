@@ -2,7 +2,7 @@
 layout: single
 title: "입출력과 변수"
 categories: CS
-tag: [정보처리기사]
+tag: [정보처리기사, Basic]
 sidebar_main: true
 toc: true
 toc_sticky: true
