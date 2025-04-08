@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "DeepLearning 이란"
+title: "DeepLearning"
 categories: DeepLearning
 tag: [AI]
 sidebar_main: true
