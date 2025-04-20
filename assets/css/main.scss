@@ -21,3 +21,11 @@ search: false
   font-weight: normal;
   font-style: normal;
 }
+
+pre code.code-block {
+  background-color: #f9f2f4;
+  color: #c7254e;
+  display: block;
+  padding: 1em;
+  border-radius: 5px;
+}
