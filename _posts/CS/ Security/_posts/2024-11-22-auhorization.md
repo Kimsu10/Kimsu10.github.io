@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "권한"
-categories: Basic
+categories: Security
 tag: [Web, 보안]
 sidebar_main: true
 toc: true
