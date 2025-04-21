@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "소켓을 사용한 퀴즈 다시 만들기"
-categories: Basic
+categories: project
 tag: [React, Node.js, Socket.io]
 sidebar_main: true
 toc: true
