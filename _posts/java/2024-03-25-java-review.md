@@ -2,7 +2,7 @@
 layout: single
 title: "자바 복습"
 categories: Java
-tag: [Java, OOP]
+tag: [Java]
 sidebar_main: true
 author_profile: true
 toc: true
