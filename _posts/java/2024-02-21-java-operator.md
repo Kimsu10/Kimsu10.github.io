@@ -2,7 +2,7 @@
 layout: single
 title: "Java의 연산자, 조건문, 반복문"
 categories: Java
-tag: [Java, Basic]
+tag: [Java]
 sidebar_main: true
 author_profile: true
 toc: true
@@ -81,13 +81,12 @@ toc_sticky: true
 
 ### 1.5 논리연산자
 
-
-| 구분               | 연산식           | 설명                                                    |
-| ------------------ | ---------------- | ------------------------------------------------------- |
-| AND(논리곱)        | `&&` 또는 `&`     | 피연산자 모두가 `true`일 경우만 `true`                  |
-| OR(논리합)         | `||` 또는 `|`     | 피연산자 중 하나만 `true`이면 `true`                    |
-| XOR(배타적 논리합) | `^`               | 피연산자 하나가 `true`, 다른 하나가 `false`인 경우만 `true` |
-| NOT(논리 부정)     | `!`               | 피연산자의 논리 값을 바꿈 (`true` → `false`, `false` → `true`) |
+| 구분               | 연산식        | 설명                                                           |
+| ------------------ | ------------- | -------------------------------------------------------------- | ------ | --- | ------------------------------------ |
+| AND(논리곱)        | `&&` 또는 `&` | 피연산자 모두가 `true`일 경우만 `true`                         |
+| OR(논리합)         | `             |                                                                | `또는` | `   | 피연산자 중 하나만 `true`이면 `true` |
+| XOR(배타적 논리합) | `^`           | 피연산자 하나가 `true`, 다른 하나가 `false`인 경우만 `true`    |
+| NOT(논리 부정)     | `!`           | 피연산자의 논리 값을 바꿈 (`true` → `false`, `false` → `true`) |
 
 ```jsx
 System.out.println("a" > "b"); //false. 유니코드 a=65, b=60
@@ -243,22 +242,22 @@ System.out.println(score + "점은" + grade + "등급입니다.");
 
 - double과 int 활용 및 if 예제
 
-    ```jsx
-      int total = 300;
-      double avg = total/3.0;
-      System.out.println(avg); // 3으로 나눌 경우 100.0 double로 자동 형변환
+  ```jsx
+    int total = 300;
+    double avg = total/3.0;
+    System.out.println(avg); // 3으로 나눌 경우 100.0 double로 자동 형변환
 
-      int total1 = 95;
-      double avg1 = total1/4.0;  // 4로 나눌 경우 23.0, 4.0으로 나눌 경우 23.75
-      System.out.println(avg1);
+    int total1 = 95;
+    double avg1 = total1/4.0;  // 4로 나눌 경우 23.0, 4.0으로 나눌 경우 23.75
+    System.out.println(avg1);
 
-      if(avg>=90) {
-        System.out.println("A");
-      }
-      else if(80<=avg && avg<90) {  //논리연산자(논리곱), 둘다 만족해야 참
-        System.out.println("B");
-      } // A출력
-    ```
+    if(avg>=90) {
+      System.out.println("A");
+    }
+    else if(80<=avg && avg<90) {  //논리연산자(논리곱), 둘다 만족해야 참
+      System.out.println("B");
+    } // A출력
+  ```
 
 - Math.random(): 반환형 double 타입의 난수를 발생
 
@@ -419,7 +418,7 @@ System.out.println(score + "점은" + grade + "등급입니다.");
     }
   ```
 
-##  반복문
+## 반복문
 
 ### 2.3 for문
 
