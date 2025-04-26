@@ -13,19 +13,19 @@ toc_sticky: true
 
 ### 클래스, 인터페이스 비교
 
-- **class** : 필드, 생성자, 메소드
-- **interface** : 필드 , 메소드 \*객체 생성 불가능
-  - 상수값: public, static, final 생략 되어 있음
-  - 메소드: public, abstract
+- `class` : 필드, 생성자, 메소드
+- `interface` : 필드 , 메소드 \*객체 생성 불가능
+  - **상수값**: public, static, final 생략 되어 있음
+  - **메소드**: public, abstract
   - 추상 메소드가 아닐 경우는 앞에 static, private, default를 적게 되면 메소드 구현 가능.{ }
 
 ---
 
 ## 1. 인터페이스 기본
 
-상속을 이용해서 다형성 구현 가능 but 인터페이스를 이용해서 **다형성을 구현**하는 경우가 더 많음
+상속으로 다형성 구현 가능 but 인터페이스를 이용해서 **다형성을 구현**하는 경우가 더 많음
 
-### 1.1 인터페이스 선언
+### 1. 인터페이스 선언
 
 - class 키워드 대신 `interface 키워드 사용`
 - 접근제한자: `default, public 붙일 수 있음`
@@ -40,9 +40,10 @@ public interface RemoteControl {
 }
 ```
 
-### 1.2 구현 클래스 선언
+### 2. 구현 클래스 선언
 
 - `인터페이스를 상속`받으려면 `implements` 사용
+
   ```java
   public interface RemoteControl {
     public void turnOn();  //추상메소드로 인식되어 함수구현 불가능
@@ -64,7 +65,7 @@ public interface RemoteControl {
   }
   ```
 
-### 1.3 상수 필드
+### 3. 상수 필드
 
 - 인터페이스에 선언된 필드는 모두 public, static, final 특성을 같음
 - public, static, final을 생략하더라도 자동적으로 컴파일 과정에서 붙게 됨
@@ -78,6 +79,7 @@ public interface RemoteControl {
   ```
 
 - 예제
+
   ```java
   interface Addin{
     public int add(int a, int b); //abstract 생략됨
@@ -116,25 +118,23 @@ public interface RemoteControl {
 
 ## 2. 메소드 (4종류)
 
-### 2.1 추상 메소드(public abstract)
+### 1. 추상 메소드(public abstract)
 
 - 추상 메소드는 리턴 타입, 메소드명, 매개변수만 적고 중괄호`{}가 붙지 않음`
 - public abstract를 생략하더라도 컴파일 과정에서 자동으로 붙음
 
-### 2.2 디폴트 메소드 (default)
+### 2. 디폴트 메소드 (default)
 
 - 인터페이스에서 완전한 실행 코드를 가진 디폴드 메소드 선언 가능
 - 추상 메소드는 실행부{}가 없지만 디폴드 메소드는 `{} 있음`
 
-### 2.3 정적 메소드 (static)
+### 3. 정적 메소드 (static)
 
 - 정적 메소드는 `구현 객체가 없어도 인터페이스만으로 호출 가능`
 - Static(정적 메소드)는 인터페이스명, 메소드명 으로 바로 호출 가능
 - `함수 구현 가능`
 
 ```java
-// p.353 p.354
-
 public interface RemoteControl{
   //상수 필드
   int ***MAX_VOLUME*** = 10; //public static final이 생략된 상태
@@ -175,7 +175,7 @@ public class RemoteControlExample {
 }
 ```
 
-### 2.4 프라이빗 메소드 (private)
+### 4. 프라이빗 메소드 (private)
 
 - `인터페이스 외부에서 접근할 수 없음`
 - private 메소드는 `디폴트 메소드 안에서만 호출 가능`
@@ -250,7 +250,7 @@ public class ServiceExample {
 
 ## 3. 인터페이스 상속
 
-### 3.1 다중 인터페이스 구현
+### 1. 다중 인터페이스 구현
 
 - 상속은 다중상속이 안되지만, 구현 객체는 여러 개의 인터페이스를 implements할 수 있음
 
@@ -260,9 +260,10 @@ public class ServiceExample {
   }
   ```
 
-### 3.2 인터페이스 상속
+### 2. 인터페이스 상속
 
-- 인터페이스도 다른 인터페이스 상속 가능, 클래스와 달리 다중 상속 허용
+- 인터페이스도 다른 인터페이스 상속 가능
+- 클래스와 달리 다중 상속 허용
 
   ```java
   public interface 자식인터페이스 extends 부모인터페이스1, 부모인터페이스2{...}
@@ -270,6 +271,7 @@ public class ServiceExample {
   ```
 
 - 예제
+
   ```java
   interface A{
     public void funcA(); //추상 메소드
@@ -319,12 +321,12 @@ public class ServiceExample {
 
 ## 4. 타입 변환
 
-- 자동 타입 변환 : 부모를 자식 객체로 타입 변환
+- `자동 타입 변환` : 부모를 자식 객체로 타입 변환
   ```java
             ↓자동타입변환┐
   인터페이스 변수 = 구현객체;
   ```
-- 강제 타입 변환 : 자식을 부모 객체로 타입 변환
+- `강제 타입 변환` : 자식을 부모 객체로 타입 변환
   ```java
               ↓    강제타입변환     ┐
   구현클래스 변수 = (구현클래스) 인터페이스 변수;
@@ -336,9 +338,12 @@ public class ServiceExample {
 
 - 상속의 다형성과 마찬가지로 인터페이스 역시 다형성을 구현하기 위해 **재정의**와 **자동 타입 변환** 기능 이용
 - 실무에서는 다형성 구현에 상속보단 인터페이스를 더 활용함
+
 - 다중 상속 예시
+
   - 다중 상속일 때 인터페이스 2개 이상 있을 때 신경써야 함
   - `class A implements A,B` | `interface A extends interface A,B`
+
   ```java
   class Tv{
     public void on() {
@@ -384,11 +389,14 @@ public class ServiceExample {
 ## 매개변수의 다형성
 
 - 매개변수 타입을 인터페이스로 선언하면 메소드 호출 시 다양한 구현 객체 대입 가능
-    <img src="https://velog.velcdn.com/images/kimsu10/post/757efabf-eb2e-48c8-886e-98fd36988edd/image.png" width="400">
+
+<p align="center">
+  <img src="https://velog.velcdn.com/images/kimsu10/post/757efabf-eb2e-48c8-886e-98fd36988edd/image.png" width="400">
+</p>
 
 - 예제
+
   ```java
-  // p.380 p.381
   public interface Vehicle{
     void run();
   }
@@ -431,6 +439,7 @@ public class ServiceExample {
     }
   }
   ```
+
   ```java
   interface Food{
     public String name();
@@ -535,6 +544,7 @@ public class ServiceExample {
   ***
 
 - Figure 인터페이스를 만들어 circle_area()에는 원면적, rec_area()에는 사각형 면적 출력
+
   ```java
   interface Figure{
     void circle_area();
@@ -579,11 +589,14 @@ public class ServiceExample {
     }
   }
   ```
+
   ***
+
   - Interface를 상속받은 Calcu클래스를 작성해라. Main()에서 a,b에 대해 적절한 값을 설정해라.
     interface Cal{
     int total(int a, int b); //a부터 b까지의 합 리턴
     int big(int a, int b);} //a,b중 큰 값 리턴
+
     ```java
     interface Cal{
         int total(int a, int b); //a부터 b까지의 합 리턴
