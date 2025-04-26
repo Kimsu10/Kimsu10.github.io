@@ -19,7 +19,10 @@ toc_sticky: true
   - `일반 예외(Exception)`: 컴파일러가 예외 처리 코드 여부를 검사
   - `실행 예외(Runtime Exception)`: 컴파일러가 예외 처리 코드 여부를 검사하지 않는 예외
 - 자바는 예외가 발생하면 예외 클래스로부터 객체 생성
+
+<p align="center">
   <img src="https://velog.velcdn.com/images/kimsu10/post/083e7438-7db1-485a-b8f5-9d252ed68233/image.png" width="400">
+</p>
 
 - 대표적인 예외 코드
   - **RuntimeException**
@@ -94,8 +97,10 @@ toc_sticky: true
 - `throws`는 메소드 선언부 끝에 작성
 - throws가 붙어있는 메소드에서 해당 예외를 처리하지 않고 넘기면 <u>이 메소드를 호출하는 곳에서 예외를 받아 처리</u>한다
 
+<p align="center">
     <img src="https://velog.velcdn.com/images/kimsu10/post/f1b19a26-a951-4f12-8539-d9a99719ef8b/image.png" width="400">
-    
+</p>
+
     ```java
     public class Test {
       public static void main(String[] args) {
@@ -105,7 +110,7 @@ toc_sticky: true
           System.out.println("예외 처리: "+e.toString());
         }
       }
-      
+
       public static void findClass() throws ClassNotFoundException{
         Class.forName("jaca.lang.string2");
       }
@@ -203,7 +208,6 @@ public class InsufficientException(String message){   //생성자 2개 선언
   ```
 
   ```java
-  482
   class Account{
     private long balance;
 
@@ -326,35 +330,35 @@ public class InsufficientException(String message){   //생성자 2개 선언
   필드는 int 형 너비 (width)와 높이 (height)가 있고, 모두private으로 선언하라.  
   생성자는 구현하지 말고 메소드는 클래스에서 필요한 내용을 판단하여 구현하라.
 
-      ```java
-      class Rectangle{
-        private int width, height;
+  ```java
+  class Rectangle{
+    private int width, height;
 
-        public void Rec() {
-          Scanner s = new Scanner(System.in);
-          System.out.println("가로세로 입력: ");
-          width = s.nextInt();
-          height = s.nextInt();
-          System.out.println(width*height);
-        }
-      }
+    public void Rec() {
+      Scanner s = new Scanner(System.in);
+      System.out.println("가로세로 입력: ");
+      width = s.nextInt();
+      height = s.nextInt();
+      System.out.println(width*height);
+    }
+  }
 
-      public class Test {
-        public static void main(String[] args) {
-          Rectangle r = new Rectangle();
-          r.Rec();
-        }
-      }
-      //밑에 문제와 연계했어야함
-      ```
+  public class Test {
+    public static void main(String[] args) {
+      Rectangle r = new Rectangle();
+      r.Rec();
+    }
+  }
+  ```
 
 - **클래스 문제2: Rectangle 클래스를 이용하는 응용프로그램**
-  Main 메소드에서 키보드에서 사각형의 너비와 높이 값을 입력받는다  
-  키보드 입력 값이 int 가 아닌 경우 예외처리를 하고, 유효한 값이 입력될 때까지 계속 입력 받게 한다  
-  키보드 입력 값이 유효한 값인 경우 해당 내용을 갖는 Rectangle 객체를 만들고,  
-   화면에 생성한 Rectangle 객체의 면적을 출력하고 프로그램을 종료한다
 
-  ````java
+  - Main 메소드에서 키보드에서 사각형의 너비와 높이 값을 입력받는다
+  - 키보드 입력 값이 int 가 아닌 경우 예외처리를 하고, 유효한 값이 입력될 때까지 계속 입력 받게 한다
+  - 키보드 입력 값이 유효한 값인 경우 해당 내용을 갖는 Rectangle 객체를 만들고,  
+    화면에 생성한 Rectangle 객체의 면적을 출력하고 프로그램을 종료한다
+
+  ```java
   //정답
   class Rectangle{
   private int width, height;
@@ -428,11 +432,8 @@ public class InsufficientException(String message){   //생성자 2개 선언
           }
         }
       }
-      ```
 
-      ---
-
-  ````
+  ```
 
 - **while과 예외처리문 활용**  
    5~10사이에 정수를 입력해서 그 수까지 있는 홀수를 더한 값 출력
