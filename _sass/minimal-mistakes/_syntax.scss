@@ -13,6 +13,11 @@ figure.highlight {
   line-height: 1.8;
   border-radius: $border-radius;
 
+  // pre code 들여쓰기 사이즈 수정
+  tab-size: 2;
+  -moz-tab-size: 2; // 파이어폭스 대응
+  -o-tab-size: 2; // 오페라 대응
+
   > pre,
   pre.highlight {
     margin: 1em 0 1em 0;
