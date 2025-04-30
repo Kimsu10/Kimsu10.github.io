@@ -29,6 +29,7 @@
 
     &.sticky {
       overflow-y: auto;
+      padding-right: 1em;
       /* calculate height of nav list
          viewport height - nav height - masthead x-padding
       */
@@ -41,7 +42,7 @@
   }
 
   > * {
-    margin-top: 1em;
+    //margin-top: 3.5em;
     margin-bottom: 1em;
   }
 
@@ -58,7 +59,7 @@
   li {
     font-family: $sans-serif;
     font-size: $type-size-6;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
   img {
@@ -122,10 +123,12 @@
    ========================================================================== */
 
 .author__avatar {
+  margin-top: 0.6em;
   display: table-cell;
   vertical-align: top;
-  width: 36px;
-  height: 36px;
+  margin-left: 0.8em;
+  width: 30px;
+  height: 30px;
 
   @include breakpoint($large) {
     display: block;
@@ -134,12 +137,12 @@
   }
 
   img {
-    max-width: 110px;
-    border-radius: 50%;
+    max-width: 230px;
+    border-radius: 15%;
 
     @include breakpoint($large) {
       padding: 5px;
-      border: 1px solid $border-color;
+      border: 2px solid skyblue//$border-color;
     }
   }
 }
@@ -148,7 +151,7 @@
   display: table-cell;
   vertical-align: top;
   padding-left: 15px;
-  padding-right: 25px;
+  padding-right: 15px;
   line-height: 1;
 
   @include breakpoint($large) {
@@ -161,6 +164,11 @@
   a {
     color: inherit;
     text-decoration: none;
+    margin-left: 0.8em;
+  }
+
+  p {
+    margin-left: 0.5em;
   }
 }
 
@@ -170,6 +178,7 @@
   @include breakpoint($large) {
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 3.6em;
   }
 }
 .sidebar .author__name {
@@ -183,6 +192,7 @@
   @include breakpoint($large) {
     margin-top: 10px;
     margin-bottom: 20px;
+    margin-left: 0.5em;
   }
 }
 
@@ -192,6 +202,8 @@
   vertical-align: middle;
   font-family: $sans-serif;
   z-index: 20;
+  margin-right: 1em;
+  text-align: center;
   cursor: pointer;
 
   li:last-child {
@@ -216,7 +228,7 @@
 
     &:before {
       @supports (pointer-events: none) {
-        content: '';
+        content: "";
         position: fixed;
         top: 0;
         left: 0;
@@ -350,4 +362,3 @@
     margin-right: initial;
   }
 }
-

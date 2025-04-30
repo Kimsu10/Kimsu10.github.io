@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .archive {
-  margin-top: 1em;
+  //margin-top: 3.6em;
   margin-bottom: 2em;
 
   @include breakpoint($large) {
@@ -20,6 +20,8 @@
 
 .archive__item {
   position: relative;
+  padding-bottom: 1.8em;
+  border-bottom: 1px solid rgb(82, 113, 136);
 
   a {
     position: relative;
@@ -32,9 +34,9 @@
 }
 
 .archive__subtitle {
-  margin: 1.414em 0 0.5em;
-  padding-bottom: 0.5em;
-  font-size: $type-size-5;
+  margin: 1.2em 0 0.5em;
+  padding-bottom: 0.8em;
+  font-size: $type-size-4;
   color: $muted-text-color;
   border-bottom: 1px solid $border-color;
 
@@ -51,7 +53,7 @@
   text-overflow: ellipsis;
 
   a[rel="permalink"]::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -61,6 +63,11 @@
 
   a + a {
     opacity: 0.5;
+  }
+  .postTitle:hover {
+    font-size: 30px;
+    text-decoration: underline;
+    text-underline-position: under;
   }
 }
 
@@ -210,7 +217,7 @@
   }
 
   .archive__item-title {
-    margin-top: 0.5em;
+    //margin-top: 0.5em;
     font-size: $type-size-5;
   }
 
@@ -285,7 +292,7 @@
   }
 
   a.btn::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -311,7 +318,7 @@
     }
 
     a.btn::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 0;
@@ -352,7 +359,7 @@
     }
 
     a.btn::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 0;
@@ -396,7 +403,7 @@
     }
 
     a.btn::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 0;
@@ -442,7 +449,7 @@
    Wide Pages
    ========================================================================== */
 
-  .wide {
+.wide {
   .archive {
     @include breakpoint($large) {
       padding-right: 0;
@@ -457,7 +464,7 @@
 /* Place inside a single layout */
 
 .layout--single {
-	.feature__wrapper {
-		display: inline-block;
-	}
+  .feature__wrapper {
+    display: inline-block;
+  }
 }

@@ -13,9 +13,14 @@ figure.highlight {
   line-height: 1.8;
   border-radius: $border-radius;
 
+  // pre code 들여쓰기 사이즈 수정
+  tab-size: 2;
+  -moz-tab-size: 2; // 파이어폭스 대응
+  -o-tab-size: 2; // 오페라 대응
+
   > pre,
   pre.highlight {
-    margin: 0;
+    margin: 1em 0 1em 0;
     padding: 1em;
   }
 }
@@ -23,12 +28,10 @@ figure.highlight {
 .highlight table {
   margin-bottom: 0;
   font-size: 1em;
-  border: 0;
 
   td {
     padding: 0;
     width: calc(100% - 1em);
-    border: 0;
 
     /* line numbers*/
     &.gutter,
@@ -318,7 +321,8 @@ figure.highlight {
 }
 
 .gist {
-  th, td {
+  th,
+  td {
     border-bottom: 0;
   }
 }

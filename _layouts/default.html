@@ -12,6 +12,16 @@
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+    <style> 
+      ::-webkit-scrollbar{width: 4px;}
+      ::-webkit-scrollbar-track {background-color:transparent;}
+      ::-webkit-scrollbar-thumb {background-color:#4ab3f5;}
+      ::-webkit-scrollbar-thumb:hover {background: #0073f7;}
+      ::-webkit-scrollbar-button:start:increment,::-webkit-scrollbar-button:end:increment 
+      {
+          width:12px;height:12px;background:#a8d7fb;}
+      
+    </style>
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
@@ -27,7 +37,12 @@
         {% include_cached search/search_form.html %}
       </div>
     {% endif %}
-
+    <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+      diameter: 56,
+      backgroundColor: 'rgb(153,153,153)',
+      textColor: '#fff'
+    })</script>
     <div id="footer" class="page__footer">
       <footer>
         {% include footer/custom.html %}

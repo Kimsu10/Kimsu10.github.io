@@ -7,7 +7,7 @@ $dark-gray: #0e2431 !default;
 $background-color: #e8d5b7 !default;
 $text-color: #000 !default;
 $muted-text-color: $dark-gray !default;
-$primary-color: #fc3a52 !default;
+$primary-color: #7c2832 !default;
 $border-color: mix(#000, $background-color, 20%) !default;
 $code-background-color: mix(#fff, $background-color, 20%) !default;
 $code-background-color-dark: mix(#000, $background-color, 10%) !default;
@@ -44,6 +44,6 @@ $base0f: #a3685a !default;
 .author__urls.social-icons i,
 .author__urls.social-icons .svg-inline--fa,
 .page__footer-follow .social-icons i,
-.page__footer-follow .social-icons .svg-inline--fa  {
+.page__footer-follow .social-icons .svg-inline--fa {
   color: inherit;
 }

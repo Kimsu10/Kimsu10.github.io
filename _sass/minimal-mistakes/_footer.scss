@@ -29,6 +29,14 @@
     }
   }
 
+  .go_to_top {
+    //position: fixed;
+    transform: translate(4em, -8.2em);
+    text-align: center;
+    cursor: pointer;
+    z-index: 20;
+  }
+
   a {
     color: inherit;
     text-decoration: none;
