@@ -2,7 +2,7 @@
 layout: single
 title: "github blog 잔디 안심어지는 문제"
 categories: GitHub
-tags: Blog
+tags: [Git, jekyll]
 toc: true
 toc_sticky: true
 sidebar_main: true
@@ -10,33 +10,35 @@ sidebar_main: true
 
 깃허브 블로그에 글을 쓰고있는데 잔디가 안심어지는 문제가 있었는데  
 이제서야 수정하는이유는  
-공부하면서 만들었던 프로젝트용 레포를 지워버렸더니 텅 비어버려서..
+공부하면서 만들었던 프로젝트용 레포를 지워버렸더니 텅 비어버려서..2,3월달은 펑펑 놀아버린 사람이 되었다
 
 ![](https://velog.velcdn.com/images/kimsu10/post/7e5bbe5b-1f06-490a-bee4-50624fe7ece6/image.png)
 
-2,3월달은 펑펑 놀아버린 사람이 되었다.
+검색을 해보니 예상되는 주된이유는 아래의 두가지라고 한다
 
-검색을 해보니 기장 주된이유는 이 두가지였다.
-
-1. email주소가 다르다
-2. merge되는 브랜치가 master(main)이 아니다.
+**1. email주소가 다르다**
+**2. merge되는 브랜치가 master(main)이 아니다**
 
 ![](https://velog.velcdn.com/images/kimsu10/post/d718571e-1237-4203-8b98-73bd1d6fbebf/image.png)
 
-일단 내경우는 위의 2가지 이유때문은 아니였다.  
-좀더 찾아보니 Fork한 레포지토리는 잔디가 안심어진다고한다.
+하지만 내경우는 위의 2가지 이유때문은 아니였다
+
+# 원인
+
+- <u>Fork한 레포지토리는 잔디가 안심어진다</u>
 
 ![](https://velog.velcdn.com/images/kimsu10/post/6201222c-6333-4b53-a182-7b44d7a7d257/image.png)
 
-나도 유튜브보고 jekyll 테마를 포크한거라 안심어지는거였다.
+유튜브보고 jekyll 테마를 포크한거라 안심어지는거였다  
+그럼 이제 어떻게 해야할까?
 
-그럼 이제 어떻게 해야하지..?
+# 해결
 
-# 1. 새로운 repository 생성하기
+## 1. 새로운 repository 생성하기
 
 ![](https://velog.velcdn.com/images/kimsu10/post/a8ad6f54-3d5b-496e-9162-800dbb9bbadf/image.png)
 
-# 2. 기존의 repository clone하기
+## 2. 기존의 repository clone하기
 
 글을 써왔던 깃허브 블로그의 레포지토리 주소를 복사한뒤
 
@@ -54,19 +56,19 @@ git clone --bare repository address
 
 > ![](https://velog.velcdn.com/images/kimsu10/post/4af295a3-0975-44fa-9d07-0d8542675116/image.png)
 
-# 3. 새로만든 repository 주소 복사
+## 3. 새로만든 repository 주소 복사
 
 1번에 만들어둔 레포로들어가면 아래의 이미지처럼 주소를 복사할 수 있다.
 
 ![](https://velog.velcdn.com/images/kimsu10/post/174a480c-b514-431d-855d-4622fa46747a/image.png)
 
-# 4. 터미널에서 clone한 .git 폴더로 이동
+## 4. 터미널에서 clone한 .git 폴더로 이동
 
 ```
 cd 블로그폴더명.git
 ```
 
-# 5. push --mirror 복사한 새 repo 주소 입력
+## 5. push --mirror 복사한 새 repo 주소 입력
 
 터미널에서 .git폴더로 이동했으면, 3번의 복사한 주소를 아래의 코드와 함께 입력한다.
 
@@ -74,7 +76,7 @@ cd 블로그폴더명.git
 git push --mirror 새 repository 주소
 ```
 
-# 6. 로컬에 만들어둔 .git폴더 삭제
+## 6. 로컬에 만들어둔 .git폴더 삭제
 
 ```
 cd ..
@@ -94,7 +96,7 @@ clone해둔 폴더를 지우고 커밋을 한번 남겨봤는데 아무일도 �
 
 앱에서 브랜치를 master로 바꾸고 커밋해봤는데 여전히 아무일도 일어나지 않았다.
 
-# 7. default branch 확인 및 변경
+## 7. default branch 확인 및 변경
 
 브랜치.. 별생각없이 지나갔는데  
 확인을위해 새로만든 레포지토리에 세팅에 들어가서 확인해봤다.
