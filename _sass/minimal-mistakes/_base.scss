@@ -31,11 +31,13 @@ h6 {
   line-height: 1.2;
   font-family: $header-font-family;
   font-weight: bold;
+  color: $h-text-color;
 }
 
 h1 {
   margin: 1.8em 0 1em 0;
   font-size: $h-size-1;
+  color: $h-text-color;
 }
 
 h2 {
@@ -72,7 +74,8 @@ p {
 u,
 ins {
   text-decoration: none;
-  border-bottom: 1px solid $text-color;
+  border-bottom: 1px solid #a9b5df;
+
   a {
     color: inherit;
   }
@@ -114,10 +117,17 @@ blockquote {
   padding-bottom: 0.05em;
   padding-left: 1em;
   padding-right: 1em;
-  // font-style: italic;
-  border-left: 0.25em solid rgb(0, 136, 255); //$primary-color;
-  background-color: rgb(2, 35, 68);
-  // opacity: 0.7;
+
+  // 블루 컬러
+  // border-left: 0.25em solid rgb(0, 136, 255); //$primary-color;
+  // background-color: rgb(21, 66, 121);
+  // color: #9fb3df;
+
+  // 올리브 컬러
+  border-left: 0.25em solid #626f47;
+  background-color: #a4b465;
+  color: white;
+  border-radius: 4px;
 
   cite {
     font-style: italic;
@@ -125,6 +135,14 @@ blockquote {
     &:before {
       content: "\2014";
       padding-right: 5px;
+    }
+  }
+
+  a {
+    // color: rgb(0, 113, 14);
+
+    &:hover {
+      color: white;
     }
   }
 }

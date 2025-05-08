@@ -18,7 +18,7 @@ minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon"
 locale: "ko-KR"
 title: "zlatnote"
 title_separator: "|"
-subtitle: "사소한것들도 일단 적고보자"
+subtitle: "하루하루 꾸준히"
 name: "Kimsu"
 description: "Experiencing a lot of errors."
 url: "https://Kimsu10.github.io"
@@ -104,7 +104,7 @@ social:
 # Site Author
 author:
   name: "Kimsu"
-  avatar: "/assets/images/profileImage.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar: "/assets/images/profileImage.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio: "언제 다시봐도 기억할 수 있게"
   #location: "South Korea"
   #email: "betnwjd25@gmail.com"

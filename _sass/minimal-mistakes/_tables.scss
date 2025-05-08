@@ -17,9 +17,10 @@ table {
 }
 
 thead {
-  background-color: $border-color;
+  background-color: mix(#1a5dc2, $border-color, 50%);
   border: 1px solid mix(#7faef5, $border-color, 25%);
   border-bottom: 2px solid mix(#f6faff, $border-color, 25%);
+  color: rgb(225, 224, 224);
 }
 
 th {

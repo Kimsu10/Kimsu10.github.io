@@ -5,8 +5,10 @@
 .masthead {
   //position: fixed;
   width: 100%;
-  background-color: #33434c;
-  border-bottom: 1px solid $border-color;
+  // background-color: #33434c; 첫 컬러
+  background-color: #fffaec;
+  border-bottom: 1px solid #183b4e;
+  // order-bottom: 1px solid $border-color;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;

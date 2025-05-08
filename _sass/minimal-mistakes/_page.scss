@@ -150,10 +150,12 @@ body {
     }
   }
 
+  // `code` 태그 설정
   :not(pre) > code {
     padding-top: 0.1rem;
     padding-bottom: 0.1rem;
     font-size: 0.8em;
+    color: white;
     background: rgb(31, 103, 238); //$code-background-color;
     border-radius: $border-radius;
 
@@ -368,6 +370,7 @@ body {
   border-radius: $border-radius;
   background-color: rgb(76, 172, 251);
   color: white;
+
   &:hover {
     text-decoration: none;
     color: white;
