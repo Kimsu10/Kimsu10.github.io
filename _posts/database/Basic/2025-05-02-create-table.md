@@ -68,23 +68,9 @@ CREATE TABLE emp (
 
 - CREATE 와 TABLE 사이에 `GLOBAL TEMPORARY` 를 기술하여 <u>임시테이블을 생성</u>한다  
   (MySQL의 경우 TEMPORARY)
-- 임시테이블은 데이터를 영구히 저장하지 않는다
+- 임시테이블은 <u>데이터를 영구 저장하지 않는다</u>
 
-  ```sql
-  CREATE GLOBAL TEMPORARY TABLE EMP_temp (
-      EMPNO NUMBER(10),
-      ENAME VARCHAR2(10),
-      SAL NUMBER(10)
-      ON COMMIT DELETE ROWS;
-  )
-  ```
-
-- **데이터를 보관하는 주기를 결정 옵션**
-
-| 옵션                        | 설명                                                                    |
-| --------------------------- | ----------------------------------------------------------------------- |
-| **ON COMMIT DELETE ROWS**   | 임시테이블에 데이터를 입력하고 <u>COMMIT 할때까지만</u> 데이터를 보관   |
-| **ON COMMIT PRESERVE ROWS** | 임시테이블에 데이터를 입력하고 <u>세션이 종료될때까지</u> 데이터를 보관 |
+ 
 
 > **사용이유**
 >
@@ -99,6 +85,54 @@ CREATE TABLE emp (
 > **3. 성능 최적화**
 >
 > - 반복 계산 대신 임시로 저장해두면 성능이 개선 할 수 있다
+
+- **데이터를 보관하는 주기를 결정 옵션**
+
+| 옵션                        | 설명                                                                    |
+| --------------------------- | ----------------------------------------------------------------------- |
+| **ON COMMIT DELETE ROWS**   | 임시테이블에 데이터를 입력하고 <u>COMMIT 할때까지만</u> 데이터를 보관   |
+| **ON COMMIT PRESERVE ROWS** | 임시테이블에 데이터를 입력하고 <u>세션이 종료될때까지</u> 데이터를 보관 |
+
+
+- **ON COMMIT DELETE ROWS**
+
+ ```sql
+  -- 임시 테이블생성
+  CREATE GLOBAL TEMPORARY TABLE EMP_temp (
+  EMPNO NUMBER(10),
+  ENAME VARCHAR2(10),
+  SAL NUMBER(10))
+  ON COMMIT DELETE ROWS;
+
+  SELECT * FROM EMP_temp; -- 데이터 삽입후 조회시 데이터가 출력됨
+
+  --데이터 삽입
+  INSERT INTO EMP_temp VALUES ( 1, 'Kim', 3000);
+  INSERT INTO EMP_temp VALUES ( 2, 'Lee', 2700);
+
+  -- 커밋 후 데이터 조회
+  commit;
+  SELECT * FROM EMP_temp; -- 커밋
+  ```
+
+- **ON COMMIT PRESERVE ROWS**
+
+```sql
+-- 임시 테이블생성 -- COMMIT PRESEVE
+CREATE GLOBAL TEMPORARY TABLE EMP_temp2 (
+EMPNO NUMBER(10),
+ENAME VARCHAR2(10),
+SAL NUMBER(10))
+ON COMMIT PRESERVE ROWS;
+
+--데이터 삽입
+INSERT INTO EMP_temp2 VALUES ( 1, 'Kims', 3000);
+INSERT INTO EMP_temp2 VALUES ( 2, 'Lees', 2700);
+
+-- 커밋화 데이터 조회
+commit;
+SELECT * FROM EMP_temp2; -- 커밋후에도 데이터가 남아있으나 세션 종료후 조회시 데이터가 사라짐
+```
 
 <br/>
 
@@ -115,3 +149,12 @@ CREATE TABLE emp (
   | **생성 시점**   | `CREATE TEMPORARY TABLE`                 | `CREATE VIEW`                            |
   | **사용 목적**   | 중간 결과 저장, 복잡한 계산 처리 등      | 복잡한 쿼리를 단순화, 재사용 목적        |
   | **수정 가능성** | 데이터 삽입, 수정, 삭제 가능             | 일반적으로 읽기 전용 (일부는 수정 가능)  |
+
+---
+
+## 오류 정리
+
+```
+SQL 오류: ORA-00947: 값의 수가 충분하지 않습니다 (not enough values)
+```
+- INSERT 구문에서 테이블의 열 개수에 맞지 않게 값이 부족할 때 발생
