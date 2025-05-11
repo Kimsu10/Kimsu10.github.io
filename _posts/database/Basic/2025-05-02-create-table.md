@@ -42,7 +42,7 @@ CREATE TABLE emp (
 
 - 테이블명이나 컬럼명 작성시 아래의 규칙을 지켜야한다
 
-> **테이블 생성시 규칙**
+> ⭐️ **테이블 생성시 규칙**
 >
 > - 반드시 문자로 시작
 > - 이름의 길이는 30자 이하
@@ -62,16 +62,17 @@ CREATE TABLE emp (
   | NUMBER      | 숫자 데이터 유형 (십진수: 최대 38자리, 소수점 이하 -84 ~ 127)             |
   | DATE        | 날짜 데이터 유형 (기원전 4712년 1월 1일 ~ 기원후 9999년 12월 31까지 허용) |
 
-
 ## 제약 조건
 
-| 제약조건          | 설명                             |
-| ------------- | ------------------------------ |
-| `NOT NULL`    | 컬럼에 null 저장 불가                 |
-| `UNIQUE`      | 값의 중복 허용하지 않음                  |
-| `PRIMARY KEY` | `NOT NULL + UNIQUE`, 테이블의 고유 키 |
+- 데이터베이스의 <u>무결성을 보장하기위해</u> 제약조건을 사용한다
+
+| 제약조건      | 설명                                    |
+| ------------- | --------------------------------------- |
+| `NOT NULL`    | 컬럼에 null 저장 불가                   |
+| `UNIQUE`      | 값의 중복 허용하지 않음                 |
+| `PRIMARY KEY` | **NOT NULL + UNIQUE**, 테이블의 고유 키 |
 | `FOREIGN KEY` | 다른 테이블의 키 참조                   |
-| `CHECK`       | 값의 조건 설정 (예: SAL > 0)          |
+| `CHECK`       | 값의 조건 설정 (예: SAL > 0)            |
 
 ---
 
@@ -80,8 +81,6 @@ CREATE TABLE emp (
 - CREATE 와 TABLE 사이에 `GLOBAL TEMPORARY` 를 기술하여 <u>임시테이블을 생성</u>한다  
   (MySQL의 경우 TEMPORARY)
 - 임시테이블은 <u>데이터를 영구 저장하지 않는다</u>
-
- 
 
 > **사용이유**
 >
@@ -99,15 +98,14 @@ CREATE TABLE emp (
 
 - **데이터를 보관하는 주기를 결정 옵션**
 
-| 옵션                        | 설명                                                                    |
-| --------------------------- | ----------------------------------------------------------------------- |
-| **ON COMMIT DELETE ROWS**   | 임시테이블에 데이터를 입력하고 <u>COMMIT 할때까지만</u> 데이터를 보관   |
-| **ON COMMIT PRESERVE ROWS** | 임시테이블에 데이터를 입력하고 <u>세션이 종료될때까지</u> 데이터를 보관 |
-
+  | 옵션                        | 설명                                                                    |
+  | --------------------------- | ----------------------------------------------------------------------- |
+  | **ON COMMIT DELETE ROWS**   | 임시테이블에 데이터를 입력하고 <u>COMMIT 할때까지만</u> 데이터를 보관   |
+  | **ON COMMIT PRESERVE ROWS** | 임시테이블에 데이터를 입력하고 <u>세션이 종료될때까지</u> 데이터를 보관 |
 
 - **ON COMMIT DELETE ROWS**
 
- ```sql
+  ```sql
   -- 임시 테이블생성
   CREATE GLOBAL TEMPORARY TABLE EMP_temp (
   EMPNO NUMBER(10),
@@ -128,22 +126,22 @@ CREATE TABLE emp (
 
 - **ON COMMIT PRESERVE ROWS**
 
-```sql
--- 임시 테이블생성 -- COMMIT PRESEVE
-CREATE GLOBAL TEMPORARY TABLE EMP_temp2 (
-EMPNO NUMBER(10),
-ENAME VARCHAR2(10),
-SAL NUMBER(10))
-ON COMMIT PRESERVE ROWS;
+  ```sql
+  -- 임시 테이블생성 -- COMMIT PRESEVE
+  CREATE GLOBAL TEMPORARY TABLE EMP_temp2 (
+  EMPNO NUMBER(10),
+  ENAME VARCHAR2(10),
+  SAL NUMBER(10))
+  ON COMMIT PRESERVE ROWS;
 
---데이터 삽입
-INSERT INTO EMP_temp2 VALUES ( 1, 'Kims', 3000);
-INSERT INTO EMP_temp2 VALUES ( 2, 'Lees', 2700);
+  --데이터 삽입
+  INSERT INTO EMP_temp2 VALUES ( 1, 'Kims', 3000);
+  INSERT INTO EMP_temp2 VALUES ( 2, 'Lees', 2700);
 
--- 커밋화 데이터 조회
-commit;
-SELECT * FROM EMP_temp2; -- 커밋후에도 데이터가 남아있으나 세션 종료후 조회시 데이터가 사라짐
-```
+  -- 커밋화 데이터 조회
+  commit;
+  SELECT * FROM EMP_temp2; -- 커밋후에도 데이터가 남아있으나 세션 종료후 조회시 데이터가 사라짐
+  ```
 
 <br/>
 
@@ -168,4 +166,6 @@ SELECT * FROM EMP_temp2; -- 커밋후에도 데이터가 남아있으나 세션 
 ```
 SQL 오류: ORA-00947: 값의 수가 충분하지 않습니다 (not enough values)
 ```
+
 - INSERT 구문에서 테이블의 열 개수에 맞지 않게 값이 부족할 때 발생
+- 원이: ()로 칼럼을 선택하지않고 모든 값을 변경하는데 칼럼을 하나 빠뜨려서..🫠
