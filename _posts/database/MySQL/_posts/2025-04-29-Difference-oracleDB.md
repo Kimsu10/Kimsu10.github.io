@@ -60,4 +60,19 @@ SELECT CONCAT(ename, '의 월급은 ', sal, '입니다') AS 월급정보 FROM em
 +-----------------------------------+
 ```
 
-# 3.
+# 3. 삭제시  존재 여부 무시시
+
+- MySQL에서는 `DROP TABLE IF EXISTS 테이블명;`문으로 존재 여부를 무시하고 삭제 가능하다
+- Oracle의 경우 IF EXISTS 를 지원하지 않는다
+
+  ```sql
+  BEGIN
+    EXECUTE IMMEDIATE 'DROP TABLE EMP';
+  EXCEPTION
+    WHEN OTHERS THEN
+        IF SQLCODE != -942 THEN
+          RAISE;
+        END IF;
+  END;
+  ```
+  - `-942`에러는 테이블이 존재하지 않을때 발생한다
