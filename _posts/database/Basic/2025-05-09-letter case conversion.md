@@ -4,7 +4,7 @@ title: "대소문자 변환 함수"
 categories: Database
 author_profile: true
 sidebar_main: true
-tag: [MySQL, Basic]
+tag: [Basic, SQL]
 toc: true
 toc_sticky: true
 ---
@@ -30,5 +30,3 @@ toc_sticky: true
 # INTICAP(ENAME)
 
 - 첫번째 문자만 대문자로 출력, 뒤의 문자들은 소문자로 출력
-
-

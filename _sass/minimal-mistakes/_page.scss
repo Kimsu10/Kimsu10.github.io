@@ -95,8 +95,10 @@ body {
 
 .page__content {
   h2 {
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid $border-color;
+    // padding-bottom: 0.5em;
+    // border-bottom: 1px solid $border-color;
+    background-color: #e4e4e4;
+    padding: 1rem 0.5rem;
   }
 
   h1,
