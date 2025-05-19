@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "MySQL Config 설정하기"
-categories: SpringBoot
+categories: Spring
 author_profile: true
 sidebar_main: true
 tag: [SpringBoot, 설정]
@@ -9,7 +9,7 @@ toc: true
 toc_sticky: true
 ---
 
-서버가 실행 후 기타 추가 설정 파일 작성하기
+서버 실행 후 기타 추가 설정 파일 작성하기
 {: .notice--info}
 
 # 프로젝트 구조
