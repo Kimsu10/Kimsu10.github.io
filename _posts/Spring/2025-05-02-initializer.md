@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "SpringBoot 초기세팅"
-categories: SpringBoot
+categories: Spring
 author_profile: true
 sidebar_main: true
 tag: [SpringBoot, Swagger]
