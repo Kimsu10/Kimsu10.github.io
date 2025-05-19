@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Mac에서 Oracle Autonomous DB 사용하기"
+title: "Mac에서 Oracle 클라우드 DB 사용하기"
 categories: Database
 author_profile: true
 sidebar_main: true
