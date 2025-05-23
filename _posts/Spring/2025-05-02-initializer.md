@@ -4,7 +4,7 @@ title: "SpringBoot 초기세팅"
 categories: Spring
 author_profile: true
 sidebar_main: true
-tag: [SpringBoot, Swagger]
+tag: [SpringBoot]
 toc: true
 toc_sticky: true
 ---
