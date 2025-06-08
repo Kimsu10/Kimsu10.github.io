@@ -19,41 +19,53 @@ vue.js 라이브러리는 배포용 버전과 개발용 버전의 파일을제�
 
 - **개발용 버전**
   - 프레임워크 내부에서 발생하는 경고 및 디버그 모두를 모두 포함
-  - 프로그램ㅇ르 개발하면서 vue의 내부동작을 확인하기 좋다
+  - 프로그램을 개발하면서 vue의 내부동작을 확인하기 좋다
   - `vue.js`
 
 # CDN 사용
 
-웹 페이지에 vue.js 라이브러리 파일을 포함하는 경우에는 CDN 사용을 권한다
-CDN 사이트에서 제공하는 Vue.js 라이브러리 파일은 아래의 주소를 사용해 쉽게 웹페이지에 적용할 수 있다
+- 웹 페이지에 vue.js 라이브러리 파일을 포함하는 경우에는 CDN 사용을 권함
+- Vue.js 라이브러리 파일은 아래의 주소를 사용해 쉽게 웹페이지에 적용할 수 있다
 
-> - unpkg.com
-> - jsDelivr.com
-> - cdnjs.com
+> - [unpkg.com](https://unpkg.com/)
+> - [jsDelivr.com](https://www.jsdelivr.com/)
+> - [cdnjs.com](https://cdnjs.com/)
 
 # npm과 vue-cli 설치
 
-ES6를 사용하거나 Vue.js를 쉽게 배포하기위해 번들링을 할 필요가 있다.  
-이때 Node.js의 패키지 매니저인 npm으로 번들러를 설치해야한다.
+Node.js의 패키지 매니저인 npm으로 번들러를 설치하면 ES6를 사용하거나 Vue.js를 쉽게 배포 할 수 있다
 
 <br/>
 
-- vue.js는 Node.js를 기반으로 실행되는 자바스크립트 프레임워크이다
+- `vue.js`: <u>Node.js를 기반으로 실행되는 자바스크립트 프레임워크</u>
 
   > [Node.js 다운로드](https://nodejs.org/ko/download)
   >
-  > - LTS(Long Term Support) 버전이 안정성이 높으므로 LTS를 추천
-  > - Current는 최신버전으로 안정성이 낮다
+  > - `LTS(Long Term Support)`: 버전이 안정성이 높으므로 LTS를 추천
+  > - `Current`: 최신버전으로 안정성이 낮음
 
 ## 1. Node.js 설치
 
 - Node.js를 <u>설치하면 npm이 자동으로 함께 설치</u>된다
 
-  > [Node.js 설치 방법]()
-
   > **Node.js**
   >
   > - 브라우저 외부에서 JavaScript를 실행할 수 있는 크로스 플랫폼 오픈 소스 런타임환경을 제공하는 프레임워크
+  > - [Node.JS 다운로드](https://nodejs.org/ko/download)
+
+  <details>
+    <summary>Node.JS 설치 방법</summary>
+    <br/>
+  1. 운영체제 및 사용할 버전을 선택해서 다운로드
+     <img src="/assets/images/NodeJs/1-1.png" width="95%"/>
+
+  2. 설치시 초콜리티 사용여부 설정
+     <img src="/assets/images/NodeJs/1-2.png" width="95%"/>
+
+  3. 노드 버전 및 설치 완료 확인
+  <br/>
+  <img src="/assets/images/NodeJs/1-3.png" width="50%"/>
+  </details>
 
 ## 2. Vue CLI 설치
 
@@ -77,4 +89,24 @@ ES6를 사용하거나 Vue.js를 쉽게 배포하기위해 번들링을 할 필�
 
 ## 3. VS code 설치
 
-> [visual studio 설치 방법]()
+- vscode는 <u>소스코드를 작성하기위해서는 코드 에디터</u>이다
+
+  <details>
+  <summary>visual studio 설치 방법</summary>
+
+    <p>
+    1.  자신의 운영체제에 맞는 방법으로 다운로드
+    <img src="/assets/images/NodeJs/1-4.png" width="95%">
+
+    <br/>
+    2. 사용시 설정
+    <img src="/assets/images/NodeJs/1-5.png" width="95%"/>
+
+    <br/>
+    3. 컬러 테마 설정
+    <img src="/assets/images/NodeJs/1-6.png" width="95%"/>
+    <br/>
+    <img src="/assets/images/NodeJs/1-7.png" width="95%"/>
+    </p>
+
+  </details>
