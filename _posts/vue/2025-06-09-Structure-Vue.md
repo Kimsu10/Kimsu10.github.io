@@ -9,8 +9,6 @@ toc: true
 toc_sticky: true
 ---
 
-# Vue 어플리케이션의 구조
-
 뷰 어플리케이션이 생성되면 아래와 같은 폴더와 파일이 생성된다
 
 <p align="center">
@@ -57,6 +55,11 @@ toc_sticky: true
   | dependencies    | 어플리케이션 실행시 필요한 의존성 모듈을 정의<br> 어플리케이션 배포 및 서비스 환경에서 사용                                                                                                                              |
   | devDependencies | 어플리케이션 개발시 필요한 의존성 모듈을 정의                                                                                                                                                                            |
 
+  <br/>
+
+## Vue 어플리케이션의 실행 과정
+
+- npm run dev → index.html → main.js → App.vue
   <br/>
 
 ## index.html
@@ -120,7 +123,7 @@ toc_sticky: true
 
 ## Vue 컴포넌트의 구조
 
-- SFC는 `<script>`,`<template>`, `<style>` 태그로 영역을 구분한다
+- Vue의 기본구조에서 App.vue는 SFC 파일이다
 
 <p align="center">
 <img src="/assets/images/Vue/1-7.png" width="95%"/>
@@ -128,6 +131,33 @@ toc_sticky: true
 
 <br/>
 
-## Vue 어플리케이션의 실행 과정
+## SFC
 
-- npm run dev → index.html → main.js → App.vue
+- SFC 파일에는 뷰 어플리케이션의 인스턴스 설정 정보가 들어있다
+- 인스턴스 생성시 SFC 파일을 createApp() 함수의 매개변수로 전달  
+  ➔ SFC 파일의 설정정보를 가져와 인스턴스를 생성한다
+
+#### SFC의 구조
+
+- SFC는 Vue의 특별한 파일형태로, 확장자가 vue인 단일 구성 요소이다
+
+  > **단일구성요소**
+  >
+  > - 하나의 파일에 인스턴스 구성 요소와 관련한 모든 코드가 포함되는 형식
+  > - 아래의 형식처럼 HTML, CSS, JS 를 한 파일안에 작성 할 수 있다
+  >
+  > ```js
+  > <script>
+  > export default {}
+  > </script>
+  > <template></template>
+  > <sylte></sylte>
+  > ```
+
+- SFC는 `<script>`,`<template>`, `<style>` 태그로 영역을 구분한다
+
+  | 영역     | 설명                                                                                                                                            |
+  | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+  | script   | SFC 파일에 사용할 로직을 JS 로 작성 <br> export default 키워드로 객체를 내보냄 <br> Options API(뷰에 객체를 작성할때 지켜야하는 문법 규칙) 사용 |
+  | template | HTML 코드를 작성하는 영역별도의 영역으로 분리                                                                                                   |
+  | style    | template 영역에 작성한 요소에 CSS 스타일을 적용하기 위해 사용<br> 뷰에서만 적용되는 CSS 범위에 따른 구분은 따로 배워야함                        |
