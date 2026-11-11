@@ -1,5 +1,5 @@
 <script setup>
-import { ArrowUpRight, ArrowDown, ChevronRight, ShieldCheck, Cloud, Terminal } from 'lucide-vue-next'
+import { ShieldCheck, Cloud, Terminal, PanelsTopLeft, Shield } from 'lucide-vue-next'
 import { profile } from '../data/portfolio'
 import { useSectionNavigation } from '../composables/useSectionNavigation'
 
@@ -13,7 +13,7 @@ const { goTo } = useSectionNavigation()
     <div class="hero-content">
       <div class="availability">
         <span class="live-dot">
-        </span> 이직중 </div>
+        </span> 구직중 </div>
       <div class="eyebrow">안녕하세요, 개발자 김수정 입니다</div>
       <h1>보안은 견고하게,<br>
         <span class="gradient-text">접근은 간편하게.</span>
@@ -49,15 +49,17 @@ const { goTo } = useSectionNavigation()
       <div class="orbit orbit-two">
       </div>
       <div class="art-center">
-        <div class="art-logo">{ <span>/</span> }</div>
-        <span>SECURE BY DESIGN</span>
+        <div class="art-logo"><Shield :size="68" :stroke-width="1.4" /></div>
+        <span>BUILD WITH CLARITY</span>
       </div>
       <div class="float-label float-a">
-        <ShieldCheck :size="17"/> Identity & Access</div>
+        <ShieldCheck :size="17"/> Identity & SSO</div>
       <div class="float-label float-b">
-        <Cloud :size="17"/> Multi-Cloud</div>
+        <Cloud :size="17"/> Cloud Access Control</div>
       <div class="float-label float-c">
-        <Terminal :size="17"/> Backend Systems</div>
+        <Terminal :size="17"/> Scalable Backend</div>
+      <div class="float-label float-d">
+        <PanelsTopLeft :size="17"/> Intuitive UI</div>
     </div>
 <!--    <button class="scroll-hint" @click="goTo('about')">-->
 <!--      <ArrowDown :size="16"/> SCROLL TO EXPLORE</button>-->

@@ -18,7 +18,7 @@ export const skillGroups = [
 export const experiences = [
   { date: '2025.06 — 2027.12.31 (퇴사 예정)',
     role: '삼성 SDS 클라우드 접근 관리 시스템 개발',
-    company: '회사명 입력 · DevOps',
+    company: '와글와이즈 · DevOps',
     description: 'Vue 3와 Spring Boot 기반 관리 플랫폼 개발 및 멀티 클라우드 접근제어 시스템 구현',
     details: [
       'Vue 3·Spring Boot 기반 관리자 페이지 및 REST API 개발',
