@@ -90,7 +90,7 @@ const specialties = [
   position: absolute;
   inset: 0;
   pointer-events: none;
-  animation: specialty-revolve 24s linear infinite paused;
+  animation: specialty-revolve 12s ease-in-out infinite paused;
 }
 .specialty-position {
   position: absolute;
@@ -99,7 +99,7 @@ const specialties = [
   transform: rotate(var(--start-angle)) translateX(205px);
 }
 .specialty-counter { transform: rotate(var(--counter-angle)); }
-.specialty-level { animation: specialty-revolve 24s linear infinite reverse paused; }
+.specialty-level { animation: specialty-counter-revolve 12s ease-in-out infinite paused; }
 .hero-art .orbit-label {
   position: relative;
   width: max-content;
@@ -111,7 +111,11 @@ const specialties = [
   animation-play-state: running;
 }
 @keyframes specialty-revolve {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(45deg); }
+}
+@keyframes specialty-counter-revolve {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-45deg); }
 }
 </style>
