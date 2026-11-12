@@ -41,9 +41,9 @@ const skillIcons = {
   <section id="skills" class="section container">
     <div class="reveal">
       <span class="section-kicker">02 / TECH STACK</span>
-      <h2 class="section-title">Tools & <span class="gradient-text">Technologies.</span>
+      <h2 class="section-title"> 기술 <span class="gradient-text"> 스택</span>
       </h2>
-      <p class="section-subtitle">문제를 해결하기 위해 활용해 온 기술들입니다.</p>
+<!--      <p class="section-subtitle">현재까지 사용해본 기술들</p>-->
     </div>
     <div class="skills-grid">
       <article v-for="(group, i) in skillGroups" :key="group.name" class="skill-card reveal">

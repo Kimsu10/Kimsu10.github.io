@@ -1,7 +1,13 @@
 <script setup>
-import { ChevronDown } from 'lucide-vue-next'
+import { ref } from 'vue'
+import { ChevronDown, Info } from 'lucide-vue-next'
+import CamDetailModal from './CamDetailModal.vue'
+import { camExplanations } from './camExplanations'
+import { splitCamDetail } from './camHighlights'
 import { camProject } from '../../data/portfolio'
 import singleIdImage from '../../images/singleId.png'
+
+const activeExplanation = ref(null)
 </script>
 
 <template>
@@ -52,7 +58,21 @@ import singleIdImage from '../../images/singleId.png'
               </div>
               <p class="project-work-technologies">{{ work.technologies.join(' · ') }}</p>
               <ul class="project-contributions">
-                <li v-for="detail in work.details" :key="detail">{{ detail }}</li>
+                <li v-for="detail in work.details" :key="detail">
+                  <template v-for="(part, index) in splitCamDetail(detail)" :key="index"><strong v-if="part.bold" class="cam-detail-highlight">{{ part.text }}</strong><template v-else>{{ part.text }}</template></template>
+                  <!-- 상세 설명 아이콘: 추후 활성화
+                  <button
+                    v-if="camExplanations[detail]"
+                    type="button"
+                    class="cam-explanation-button"
+                    :aria-label="camExplanations[detail].title + ' 상세 설명 보기'"
+                    aria-haspopup="dialog"
+                    @click="activeExplanation = camExplanations[detail]"
+                  >
+                    <Info :size="16" aria-hidden="true" />
+                  </button>
+                  -->
+                </li>
               </ul>
             </li>
           </ol>
@@ -74,4 +94,12 @@ import singleIdImage from '../../images/singleId.png'
       </div>
     </details>
   </article>
+  <CamDetailModal v-if="activeExplanation" :explanation="activeExplanation" @close="activeExplanation = null" />
 </template>
+
+<style scoped>
+.cam-detail-highlight { font-weight: 700; color: var(--text); }
+.cam-explanation-button { display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; width: 28px; height: 28px; margin-left: 4px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: var(--accent); }
+.cam-explanation-button:hover { background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.cam-explanation-button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+</style>

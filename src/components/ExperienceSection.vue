@@ -7,7 +7,7 @@ import { experiences } from '../data/portfolio'
     <div class="container">
       <div class="reveal">
         <span class="section-kicker">03 / EXPERIENCE</span>
-        <h2 class="section-title">Where I've <span class="gradient-text">Worked.</span>
+        <h2 class="section-title">업무<span class="gradient-text"> 경험</span>
         </h2>
       </div>
       <div class="timeline">

@@ -99,9 +99,8 @@ export const camProject = {
         "Jenkins"
       ],
       "details": [
-        "GCP 계정 간 신뢰관계 구성 및 Keycloak/SingleID 기반 SAML SSO 페더레이션 연동",
+        "GCP 계정 간 신뢰관계 구성 및 Keycloak/SingleID 기반 SAML SSO 페더레이션 자동 연동",
         "GCP SDK와 API를 활용한 콘솔 및 리소스 접근 제어 기능 개발",
-        "Command/Query 책임 분리를 통한 데이터 생성·수정, 조회·삭제 로직 구성",
         "프로젝트·정책·사용자 생성 및 권한 부여 기능 개발",
         "Spring Scheduler를 사용한 정기 작업 구현",
         "JUnit 기반 단위 테스트 작성 및 Jenkins를 활용한 배포"
@@ -124,12 +123,12 @@ export const camProject = {
         "자원 등록 및 접속 시 PEM과 Password를 사용하여 관리자 계정을 자동으로 생성하고 접근 권한을 부여하는 기능 구현",
         "SSH 기반 JumpHost → Bastion → Target 서버 간 포트 포워딩 및 터널링 기능 개발",
         "Linux 명령어를 활용한 관리자 계정 생성, 비밀번호 변경 및 사용자 권한 관리 자동화",
-        "접속 시점의 사용자 역할 및 권한 검증 기능 개발",
+        "자원 연결시 사용자 역할 및 권한 검증 기능 개발",
         "JUnit 기반 단위 테스트 작성"
       ]
     },
     {
-      "title": "Multi-Enrollment 기반 CSP 자원 등록 및 접속 기능 확장",
+      "title": "Multi-Enrollment 기반 CSP 자원 등록 및 접근 기능 확장",
       "period": "2026.03 ~ 2026.07",
       "technologies": [
         "Java",
@@ -141,7 +140,7 @@ export const camProject = {
       ],
       "details": [
         "기존 Linux 명령어 기반 Compute 및 DB 자원 자동 등록 방식에 사용자 계정 기반 수동 등록 기능 추가",
-        "AWS, Azure, GCP, SCP_V1, OnPremises 환경으로 지원 CSP를 확장하고 Windows 자원 지원 추가",
+        "AWS, Azure, GCP, SCP_V1, OnPremises 환경으로 지원하는 CSP 확장 및 코드 통일화, Windows 자원 지원 추가",
         "기존 PuTTY 기반 Linux 접속 방식에 Guacamole 기반 Web Terminal 추가"
       ]
     },
@@ -154,7 +153,7 @@ export const camProject = {
         "MyBatis"
       ],
       "details": [
-        "테넌트별 관리자가 CSP 등록 및 접속 방식을 설정할 수 있는 기능 개발",
+        "DB와 Vue의 CodeStore를 사용해 관리자가 CSP 등록 및 접속 방식을 설정할 수 있는 기능 개발",
         "허용 가능한 클라우드 자원 유형을 관리하는 REST API 및 관리자 화면 구현"
       ]
     },
@@ -169,9 +168,8 @@ export const camProject = {
         "SAML 2.0"
       ],
       "details": [
-        "OCI 테넌시 간 신뢰관계 및 Keycloak/SingleID 기반 SAML SSO 페더레이션 연동",
+        "OCI 테넌시 간 신뢰관계 구축 및 Keycloak/SingleID 기반 SAML SSO 페더레이션 연동",
         "OCI Java SDK를 활용한 클라우드 콘솔 및 리소스 접근 제어 기능 개발",
-        "Command/Query 책임 분리를 통한 데이터 생성·수정, 조회·삭제 로직 구성",
         "프로젝트·정책·사용자 생성 및 권한 부여 기능 개발",
         "Spring Scheduler를 사용한 정기 작업 구현",
         "OCI Compartment, Identity Domain, 사용자 및 정책 관리 기능 개발",

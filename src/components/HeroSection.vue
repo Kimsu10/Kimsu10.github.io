@@ -4,6 +4,13 @@ import { profile } from '../data/portfolio'
 import { useSectionNavigation } from '../composables/useSectionNavigation'
 
 const { goTo } = useSectionNavigation()
+
+const specialties = [
+  { label: 'Identity & SSO', icon: ShieldCheck, angle: '-140deg', counterAngle: '140deg' },
+  { label: 'Cloud Access Control', icon: Cloud, angle: '-30deg', counterAngle: '30deg' },
+  { label: 'Scalable Backend', icon: Terminal, angle: '140deg', counterAngle: '-140deg' },
+  { label: 'Intuitive UI', icon: PanelsTopLeft, angle: '60deg', counterAngle: '-60deg' },
+]
 </script>
 
 <template>
@@ -14,7 +21,7 @@ const { goTo } = useSectionNavigation()
       <div class="availability">
         <span class="live-dot">
         </span> 구직중 </div>
-      <div class="eyebrow">안녕하세요, 개발자 김수정 입니다</div>
+      <div class="eyebrow">안녕하세요, 개발자 김수정입니다</div>
       <h1>보안은 견고하게,<br>
         <span class="gradient-text">접근은 간편하게.</span>
       </h1>
@@ -26,22 +33,22 @@ const { goTo } = useSectionNavigation()
         <button class="btn secondary" @click="goTo('contact')">연락하기
         </button>
       </div>
-      <div class="hero-meta">
-        <span>
-          <span class="meta-dot">
-          </span> JAVA & SPRING BOOT</span>
-        <span>
-          <span>
-          <span class="meta-dot">
-          </span> JavaScript & Vue 3</span>
-        </span>
-        <span>
-          <span class="meta-dot">
-          </span> CLOUD IAM</span>
-        <span>
-          <span class="meta-dot">
-          </span> SSO / FEDERATION</span>
-      </div>
+<!--      <div class="hero-meta">-->
+<!--        <span>-->
+<!--          <span class="meta-dot">-->
+<!--          </span> JAVA & SPRING BOOT</span>-->
+<!--        <span>-->
+<!--          <span>-->
+<!--          <span class="meta-dot">-->
+<!--          </span> JavaScript & Vue 3</span>-->
+<!--        </span>-->
+<!--        <span>-->
+<!--          <span class="meta-dot">-->
+<!--          </span> CLOUD IAM</span>-->
+<!--        <span>-->
+<!--          <span class="meta-dot">-->
+<!--          </span> SSO / FEDERATION</span>-->
+<!--      </div>-->
     </div>
     <div class="hero-art" aria-hidden="true">
       <div class="orbit orbit-one">
@@ -52,16 +59,56 @@ const { goTo } = useSectionNavigation()
         <div class="art-logo"><Shield :size="68" :stroke-width="1.4" /></div>
         <span>BUILD WITH CLARITY</span>
       </div>
-      <div class="float-label float-a">
-        <ShieldCheck :size="17"/> Identity & SSO</div>
-      <div class="float-label float-b">
-        <Cloud :size="17"/> Cloud Access Control</div>
-      <div class="float-label float-c">
-        <Terminal :size="17"/> Scalable Backend</div>
-      <div class="float-label float-d">
-        <PanelsTopLeft :size="17"/> Intuitive UI</div>
+      <div
+        v-for="specialty in specialties"
+        :key="specialty.label"
+        class="specialty-orbit"
+        :style="{ '--start-angle': specialty.angle, '--counter-angle': specialty.counterAngle }"
+      >
+        <div class="specialty-position">
+          <div class="specialty-counter">
+            <div class="specialty-level">
+              <div class="float-label orbit-label">
+                <component :is="specialty.icon" :size="17" />
+                {{ specialty.label }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 <!--    <button class="scroll-hint" @click="goTo('about')">-->
 <!--      <ArrowDown :size="16"/> SCROLL TO EXPLORE</button>-->
   </section>
 </template>
+
+<style scoped>
+.specialty-orbit {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  animation: specialty-revolve 24s linear infinite paused;
+}
+.specialty-position {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: rotate(var(--start-angle)) translateX(205px);
+}
+.specialty-counter { transform: rotate(var(--counter-angle)); }
+.specialty-level { animation: specialty-revolve 24s linear infinite reverse paused; }
+.hero-art .orbit-label {
+  position: relative;
+  width: max-content;
+  transform: translate(-50%, -50%);
+  animation: none;
+}
+.hero-art:has(.art-center:hover) .specialty-orbit,
+.hero-art:has(.art-center:hover) .specialty-level {
+  animation-play-state: running;
+}
+@keyframes specialty-revolve {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+</style>
