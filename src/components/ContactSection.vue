@@ -6,9 +6,10 @@ import { profile } from '../data/portfolio'
 <template>
   <section id="contact" class="section contact-section">
     <div class="container contact-inner reveal">
-      <span class="section-kicker">05 / CONTACT ME</span>
-      <h2>함께 고민하고<br>
-        <span class="gradient-text">더 좋은 시스템을 만들고 싶습니다.</span>
+      <span class="section-kicker">06 / CONTACT ME</span>
+      <h2>끊임없이 고민하고,
+       <br>
+        <span class="gradient-text"> 성장하는 개발자를 지향합니다</span>
       </h2>
 <!--      <p>기술적인 고민이나 새로운 기회에 대해 편하게 이야기 나누고 싶습니다.</p>-->
       <div class="contact-buttons">
@@ -22,3 +23,11 @@ import { profile } from '../data/portfolio'
     </div>
   </section>
 </template>
+
+<style scoped>
+.contact-inner h2 {
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.35;
+  letter-spacing: -1.5px;
+}
+</style>

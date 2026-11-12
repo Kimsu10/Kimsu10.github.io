@@ -18,7 +18,7 @@ export const skillGroups = [
 export const experiences = [
   { date: '2025.06 — 현재',
     role: '삼성SDS 클라우드 접근 관리 시스템 개발',
-    company: '와글와이즈 · DevOps',
+    company: '와글와이즈 · 정규직/풀스택',
     description: 'Vue 3와 Spring Boot 기반 관리 플랫폼 개발 및 멀티 클라우드 접근 제어 시스템 구현',
     details: [
       'Vue 3·Spring Boot 기반 관리자 페이지 및 REST API 개발',

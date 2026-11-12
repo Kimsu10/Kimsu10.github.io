@@ -5,6 +5,7 @@ import AboutSection from './components/AboutSection.vue'
 import SkillsSection from './components/SkillsSection.vue'
 import ExperienceSection from './components/ExperienceSection.vue'
 import ProjectsSection from './components/ProjectsSection.vue'
+import EducationSection from './components/EducationSection.vue'
 import ContactSection from './components/ContactSection.vue'
 import SiteFooter from './components/SiteFooter.vue'
 import { useTheme } from './composables/useTheme'
@@ -23,6 +24,7 @@ const { scrollProgress } = useScrollEffects()
     <SkillsSection />
     <ExperienceSection />
     <ProjectsSection />
+    <EducationSection />
     <ContactSection />
   </main>
   <SiteFooter />

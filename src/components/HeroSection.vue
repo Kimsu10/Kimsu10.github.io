@@ -18,9 +18,9 @@ const specialties = [
     <div class="hero-grid">
     </div>
     <div class="hero-content">
-      <div class="availability">
-        <span class="live-dot">
-        </span> 구직중 </div>
+<!--      <div class="availability">-->
+<!--        <span class="live-dot">-->
+<!--        </span> 구직중 </div>-->
       <div class="eyebrow">안녕하세요, 개발자 김수정입니다</div>
       <h1>구조를 이해하고<br>
         <span class="gradient-text">변화를 만듭니다</span>

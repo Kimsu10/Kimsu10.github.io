@@ -15,7 +15,7 @@ import { tagByCompanyProject as project } from './tagByCompany'
           </div>
           <h3>{{ project.title }}</h3>
           <p>{{ project.description }}</p>
-          <p class="project-team">팀 구성: {{ project.team }} · 담당 역할: {{ project.position }}</p>
+<!--          <p class="project-team">팀 구성: {{ project.team }} · 담당 역할: {{ project.position }}</p>-->
           <div class="tag-list">
             <span v-for="tag in project.tags" :key="tag" class="tag">{{ tag }}</span>
           </div>
