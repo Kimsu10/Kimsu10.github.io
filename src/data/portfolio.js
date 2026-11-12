@@ -16,7 +16,7 @@ export const skillGroups = [
   { name: 'Infrastructure', skills: ['Git', 'Linux', 'SSH', 'Jenkins', 'Docker', 'Kubernetes', 'Argo CD' ] },
 ]
 export const experiences = [
-  { date: '2025.06 — 현재',
+  { date: '2025.06 ~ 현재',
     role: '삼성SDS 클라우드 접근 관리 시스템 개발',
     company: '와글와이즈 · 정규직/풀스택',
     description: 'Vue 3와 Spring Boot 기반 관리 플랫폼 개발 및 멀티 클라우드 접근 제어 시스템 구현',
@@ -27,7 +27,7 @@ export const experiences = [
     ],
     tags: ['Spring Boot', 'Vue 3', 'AWS', 'Azure', 'GCP', 'SCP', 'OCI', 'Linux', 'SSH', 'Jenkins', 'Kubernetes', 'Git', 'Argo CD', 'MyBatis', 'MySQL', 'PostgreSQL' ] },
   {
-    date: '2023.07 — 2023.08',
+    date: '2023.07 ~ 2023.08',
     role: '한의사용 에디터 플러그인 고도화',
     company: '메디스트림 · 임시직/프론트엔드',
     description: 'Vue.js와 ProseMirror를 사용한 사내 에디터 고도화',
@@ -36,10 +36,10 @@ export const experiences = [
       '사용자가 직관적으로 글자 크기를 조정할 수 있도록 UI와 동작 방식 개선',
       '일반 텍스트와 테이블 셀에서 글자 크기 변경 및 내부·외부 복사·붙여넣기 동작 구현과 QA 수행',
     ],
-    tags: ['Vue.js', 'ProseMirror'],
+    tags: ['Vue 3', 'ProseMirror'],
   },
   {
-    date: '2022.12.09 — 2023.01.08',
+    date: '2022.12.09 ~ 2023.01.08',
     role: '인플루언서 광고 모니터링 업무 자동화',
     company: '태그바이컴퍼니 · 임시직/백엔드',
     description: 'Node.js와 MySQL을 활용한 사무 업무 자동화 시스템',
@@ -171,7 +171,6 @@ export const camProject = {
         "OCI 테넌시 간 신뢰관계 구축 및 Keycloak/SingleID 기반 SAML SSO 페더레이션 연동",
         "OCI Java SDK를 활용한 클라우드 콘솔 및 리소스 접근 제어 기능 개발",
         "프로젝트·정책·사용자 생성 및 권한 부여 기능 개발",
-        "Spring Scheduler를 사용한 정기 작업 구현",
         "OCI Compartment, Identity Domain, 사용자 및 정책 관리 기능 개발",
         "OCI Group, User, Policy 생성을 통한 IAM 권한 관리 자동화"
       ]
