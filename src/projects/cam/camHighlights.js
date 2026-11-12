@@ -2,12 +2,12 @@
 const highlightedPhrases = [
   "GCP 계정 간 신뢰관계 구성 및 Keycloak/SingleID 기반 SAML SSO 페더레이션 자동 연동",
   "Multi-Enrollment 방식으로 확장",
-  "PEM과 Password를 사용하여 관리자 계정을 자동으로 생성하고 접근 권한을 부여",
+  "PEM 키 또는 비밀번호로 서버에 인증한 뒤, 관리자 계정 생성 및 접근 권한 부여를 자동화",
   "JumpHost → Bastion → Target 서버 간 포트 포워딩 및 터널링",
-  "Linux 명령어를 활용한 관리자 계정 생성, 비밀번호 변경 및 사용자 권한 관리 자동화",
+  "Linux 서버에서 명령어를 활용한 관리자 계정 생성, 비밀번호 변경 및 사용자 권한 관리 자동화",
   "사용자 계정 기반 수동 등록 기능 추가",
-  "지원하는 CSP 확장 및 코드 통일화",
-  "DB와 Vue의 CodeStore를 사용해 관리자가 CSP 등록 및 접속 방식을 설정할 수 있는 기능 개발",
+  "지원 범위를 확대하고, 공통 처리 로직 정비",
+  "DB의 설정 정보와 Vue 기반 관리자 화면의 CodeStore를 연동하여 테넌트별 CSP 등록·접속 방식 설정 기능 구현",
   "OCI 테넌시 간 신뢰관계 구축 및 Keycloak/SingleID 기반 SAML SSO 페더레이션 연동"
 ]
 

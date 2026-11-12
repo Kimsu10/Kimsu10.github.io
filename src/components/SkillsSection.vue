@@ -10,6 +10,8 @@ import {
 const skillIcons = {
   Java: Coffee,
   'Spring Boot': Leaf,
+  'Node.js': Terminal,
+  Express: Network,
   'REST API': Network,
   'Spring Scheduler': CalendarClock,
   MyBatis: Layers,
@@ -32,6 +34,7 @@ const skillIcons = {
   Linux: Terminal,
   SSH: LockKeyhole,
   Jenkins: Workflow,
+  Docker: Container,
   Kubernetes: Container,
   'Argo CD': RefreshCw,
 }

@@ -22,8 +22,8 @@ const specialties = [
         <span class="live-dot">
         </span> 구직중 </div>
       <div class="eyebrow">안녕하세요, 개발자 김수정입니다</div>
-      <h1>보안은 견고하게,<br>
-        <span class="gradient-text">접근은 간편하게.</span>
+      <h1>구조를 이해하고<br>
+        <span class="gradient-text">변화를 만듭니다</span>
       </h1>
       <h2>{{ profile.intro }}</h2>
       <p class="hero-description">{{ profile.description }}</p>
@@ -83,6 +83,9 @@ const specialties = [
 </template>
 
 <style scoped>
+.hero-content { width: 100%; max-width: 755px; }
+.hero-description { max-width: 100%; white-space: pre-line; }
+.hero-art { transform: scale(.85); transform-origin: right center; }
 .specialty-orbit {
   position: absolute;
   inset: 0;
