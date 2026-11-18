@@ -475,28 +475,11 @@ export const camProject = {
         "Guacamole"
       ],
       "details": [
-        "기존 Linux 명령어 기반 Compute 및 DB 자원 자동 등록 방식에 사용자 계정 기반 수동 등록 기능 추가",
-        "AWS, Azure, GCP, SCP_V1 및 온프레미스 환경으로 지원 범위를 확대하고, 공통 처리 로직 정비 및 Windows 자원 지원 추가",
-        "기존 PuTTY 기반 Linux 접속 방식에 Guacamole 기반 Web Terminal 추가"
-      ]
-    },
-    {
-      "title": "CodeStore 기반 클라우드 자원 관리 기능 개발",
-      "period": "2026.09",
-      "process": {
-        "summary": "테넌트별 CSP 등록·접속 방식과 허용 자원 유형을 관리하는 기능을 구현했습니다.",
-        "implementation": "DB 설정을 Vue 관리자 화면의 CodeStore와 연동하고 허용 자원 유형 관리 API를 개발했습니다.",
-        "outcome": "관리 화면에서 테넌트별 등록·접속 방식과 허용 자원 유형을 관리할 수 있게 했습니다."
-      },
-      "rationale": "테넌트마다 허용하는 자원 유형과 등록·접속 방식이 다를 수 있어 이 값을 설정으로 관리했습니다. DB 설정을 관리자 화면과 연결해 테넌트별 운영 정책을 화면에서 조정할 수 있도록 했습니다.",
-      "technologies": [
-        "Vue 3",
-        "Spring Boot",
-        "MyBatis"
-      ],
-      "details": [
-        "DB의 설정 정보와 Vue 기반 관리자 화면의 CodeStore를 연동하여 테넌트별 CSP 등록·접속 방식 설정 기능 구현",
-        "허용 가능한 클라우드 자원 유형을 관리하는 REST API 및 관리자 화면 구현"
+        "기존 CAM 관리자 계정 자동 생성 방식에 사용자 보유 계정을 활용한 수동 Resource Enrollment 기능 추가",
+        "Multi-Enrollment 지원 환경을 AWS·Azure·GCP·SCP_V1·온프레미스로 확대하고 Windows 자원 지원",
+        "Azure SDK를 활용한 NSG 인바운드·아웃바운드 보안 규칙 자동 생성 및 Client Secret 만료 관련 VOC 대응",
+        "코드 기반 CSP·리소스·접속 유형 설정을 DB 기반 테넌트별 관리 구조로 개선하고 관리자 페이지 및 REST API 개발",
+        "Resource Enrollment 관련 270가지 테스트 시나리오 검증 및 브랜치 통합·관리"
       ]
     },
     {

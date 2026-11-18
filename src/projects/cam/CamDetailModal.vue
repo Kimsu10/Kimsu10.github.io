@@ -11,6 +11,16 @@ const content = ref(null)
 const pageContent = ref(null)
 const scrollPosition = ref(0)
 const scrollLimit = ref(0)
+const scrollProgress = computed(() => {
+  const position = scrollPosition.value
+  const limit = scrollLimit.value
+  if (limit <= 0 || position <= 0) return 6
+
+  // Scroll dimensions are rounded, while scrollTop can contain fractional pixels.
+  if (limit - position <= 1) return 100
+
+  return 6 + 94 * position / limit
+})
 const previousArrow = ref(null)
 const nextArrow = ref(null)
 const currentIndex = ref(0)
@@ -165,7 +175,7 @@ onBeforeUnmount(() => {
             min="0"
             :max="scrollLimit"
             :value="scrollPosition"
-            :style="{ '--cam-scroll-progress': (scrollPosition / scrollLimit) * 100 + '%' }"
+            :style="{ '--cam-scroll-progress': scrollProgress + '%' }"
             @input="content.scrollTop = $event.target.valueAsNumber"
             @keydown.left.stop
             @keydown.right.stop
@@ -203,10 +213,10 @@ onBeforeUnmount(() => {
 .cam-page-count { position: relative; flex-shrink: 0; padding-top: 10px; border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; text-align: center; }
 .cam-page-count:has(.cam-scroll-slider) { border-top-color: transparent; }
 .cam-scroll-slider { --cam-scroll-track: linear-gradient(to right, var(--accent) var(--cam-scroll-progress), transparent var(--cam-scroll-progress)); position: absolute; inset-inline: 0; top: -8px; width: 100%; height: 15px; margin: 0; padding: 0; border: 0; appearance: none; background: transparent; cursor: pointer; }
-.cam-scroll-slider::-webkit-slider-runnable-track { height: 4px; border: 0; border-radius: 0; background: var(--cam-scroll-track); }
-.cam-scroll-slider::-webkit-slider-thumb { width: 12px; height: 12px; margin-top: -4px; border: 0; border-radius: 50%; appearance: none; background: var(--accent); }
-.cam-scroll-slider::-moz-range-track { height: 4px; border: 0; border-radius: 0; background: var(--cam-scroll-track); }
-.cam-scroll-slider::-moz-range-thumb { width: 12px; height: 12px; border: 0; border-radius: 50%; background: var(--accent); }
+.cam-scroll-slider::-webkit-slider-runnable-track { height: 6px; border: 0; border-radius: 0; background: var(--cam-scroll-track); }
+.cam-scroll-slider::-webkit-slider-thumb { width: 12px; height: 15px; margin-top: -4.5px; border: 0; appearance: none; background: transparent; }
+.cam-scroll-slider::-moz-range-track { height: 6px; border: 0; border-radius: 0; background: var(--cam-scroll-track); }
+.cam-scroll-slider::-moz-range-thumb { width: 12px; height: 15px; border: 0; background: transparent; }
 .cam-slide-enter-active { transition: transform .2s ease, opacity .2s ease; }
 .cam-slide-enter-from { transform: translateX(16px); opacity: 0; }
 </style>
