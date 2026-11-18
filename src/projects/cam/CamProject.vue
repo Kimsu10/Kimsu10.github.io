@@ -1,13 +1,12 @@
 <script setup>
 import { ref } from 'vue'
-import { ChevronDown, Info } from 'lucide-vue-next'
+import { ChevronDown, ChevronRight } from 'lucide-vue-next'
 import CamDetailModal from './CamDetailModal.vue'
-import { camExplanations } from './camExplanations'
 import { splitCamDetail } from './camHighlights'
 import { camProject } from '../../data/portfolio'
 import singleIdImage from '../../images/singleId.png'
 
-const activeExplanation = ref(null)
+const selectedWork = ref(null)
 </script>
 
 <template>
@@ -17,8 +16,8 @@ const activeExplanation = ref(null)
       <summary class="project-story-summary">
         <div class="project-story-intro">
           <div class="project-story-meta">
-            <span>{{ camProject.category }}</span>
-            <span class="project-story-client">/ {{ camProject.client }}</span>
+            <span>{{ camProject.category }} · {{ camProject.client }}</span>
+            <span class="project-story-client">/ waglewise · 2025.06 ~ 재직중</span>
           </div>
           <h3>{{ camProject.title }}</h3>
           <p>{{ camProject.description }}</p>
@@ -52,26 +51,20 @@ const activeExplanation = ref(null)
           <h4 id="cam-contributions">담당 업무와 기여</h4>
           <ol class="project-work-list">
             <li v-for="work in camProject.contributions" :key="work.title" class="project-work">
-              <div class="project-work-heading">
-                <h5>{{ work.title }}</h5>
-                <span v-if="work.period" class="project-work-period">{{ work.period }}</span>
+              <div class="cam-work-header">
+                <div class="project-work-heading">
+                  <h5>{{ work.title }}</h5>
+                  <span v-if="work.period" class="project-work-period">{{ work.period }}</span>
+                </div>
+                <button type="button" class="cam-work-button" :aria-label="work.title + ' 구현 과정'" aria-haspopup="dialog" @click="selectedWork = work">
+                  구현 과정
+                  <ChevronRight :size="16" aria-hidden="true" />
+                </button>
               </div>
               <p class="project-work-technologies">{{ work.technologies.join(' · ') }}</p>
               <ul class="project-contributions">
                 <li v-for="detail in work.details" :key="detail">
                   <template v-for="(part, index) in splitCamDetail(detail)" :key="index"><strong v-if="part.bold" class="cam-detail-highlight">{{ part.text }}</strong><template v-else>{{ part.text }}</template></template>
-                  <!-- 상세 설명 아이콘: 추후 활성화
-                  <button
-                    v-if="camExplanations[detail]"
-                    type="button"
-                    class="cam-explanation-button"
-                    :aria-label="camExplanations[detail].title + ' 상세 설명 보기'"
-                    aria-haspopup="dialog"
-                    @click="activeExplanation = camExplanations[detail]"
-                  >
-                    <Info :size="16" aria-hidden="true" />
-                  </button>
-                  -->
                 </li>
               </ul>
             </li>
@@ -94,12 +87,17 @@ const activeExplanation = ref(null)
       </div>
     </details>
   </article>
-  <CamDetailModal v-if="activeExplanation" :explanation="activeExplanation" @close="activeExplanation = null" />
+  <CamDetailModal
+    v-if="selectedWork"
+    :work="selectedWork"
+    @close="selectedWork = null"
+  />
 </template>
 
 <style scoped>
 .cam-detail-highlight { font-weight: 700; color: var(--text); }
-.cam-explanation-button { display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; width: 28px; height: 28px; margin-left: 4px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: var(--accent); }
-.cam-explanation-button:hover { background: color-mix(in srgb, var(--accent) 12%, transparent); }
-.cam-explanation-button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.cam-work-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.cam-work-button { display: inline-flex; align-items: center; gap: 4px; flex-shrink: 0; min-height: 36px; padding: 6px 9px; border: 0; border-radius: 8px; background: var(--surface2); color: var(--accent); font-size: 12px; font-weight: 700; white-space: nowrap; }
+.cam-work-button:hover { background: color-mix(in srgb, var(--accent) 12%, var(--surface2)); }
+.cam-work-button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 </style>
