@@ -188,9 +188,9 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
-.cam-detail-dialog { width: min(610px, calc(100% - 40px)); max-width: none; max-height: 90dvh; margin: auto; padding: 0; border: 0; background: transparent; color: var(--text); overflow: visible; }
+.cam-detail-dialog { --cam-dialog-height: min(615px, 90dvh); width: min(calc(var(--cam-dialog-height) * 1.5), calc(100% - 40px)); max-width: none; max-height: 90dvh; margin: auto; padding: 0; border: 0; background: transparent; color: var(--text); overflow: visible; }
 .cam-detail-dialog::backdrop { background: #030612d9; backdrop-filter: blur(8px); }
-.cam-detail-panel { --cam-arrow-gutter: clamp(40px, 9vw, 52px); display: flex; flex-direction: column; width: 100%; height: min(615px, 90dvh); max-height: 90dvh; padding: 24px 0 12px; overflow: hidden; }
+.cam-detail-panel { --cam-arrow-gutter: clamp(40px, 9vw, 52px); display: flex; flex-direction: column; width: 100%; height: var(--cam-dialog-height); max-height: 90dvh; padding: 24px 0 12px; overflow: hidden; }
 .cam-detail-panel .modal-close { top: 12px; right: 12px; z-index: 1; border: 0; background: transparent; }
 .cam-detail-content { flex: 1; min-height: 0; margin-inline: var(--cam-arrow-gutter); overflow-x: hidden; overflow-y: auto; scrollbar-width: none; overscroll-behavior: contain; touch-action: pan-y pinch-zoom; }
 .cam-detail-content::-webkit-scrollbar { display: none; }

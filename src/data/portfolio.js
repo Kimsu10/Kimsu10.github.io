@@ -60,7 +60,7 @@ export const projects = [
 ]
 
 export const camProject = {
-  "title": "SingleID CAM · 클라우드 접근 관리 시스템 ",
+  "title": "클라우드 접근 관리 시스템 (SingleID CAM)",
   "category": "클라우드",
   "client": "삼성SDS 프로젝트",
   "description": "여러 클라우드의 콘솔과 리소스 접근을 관리하는 CAM 시스템에서 관리자 페이지, SSO 페더레이션, 자원 접근 제어 및 계정 관리 기능을 개발했습니다.",
@@ -68,8 +68,21 @@ export const camProject = {
     "Spring Boot",
     "Vue 3",
     "MyBatis",
+    "PostgresSQL",
+    "MySQL",
+    "AWS",
+    "Azure",
+    "GCP",
+    "SCP",
+    "OCI",
+    "Linux",
+    "Git",
+    "JUnit",
+    "Jenkins",
+    "Docker",
+    "Kubernetes",
     "SAML 2.0",
-    "SSH"
+    "SSH",
   ],
   "contributions": [
     {
@@ -487,12 +500,101 @@ export const camProject = {
       "period": "2026.10 ~ 진행중",
       "rationale": "기존 클라우드 인증 구조와의 일관성, SAML 인증 요청 및 응답의 무결성, 사용자 편의성을 고려했습니다.",
       "process": {
-        "title": "OCI SSO/Federation 연동",
-        "technologies": ["Spring Boot", "OCI SDK", "Keycloak", "SAML 2.0"],
-        "summary": "OCI Identity Domain과 Keycloak 간 SAML 기반 SSO를 연동하고, OCI 콘솔 접근을 위한 인증 흐름과 IAM 관리 기능을 개발했습니다.",
-        "implementation": "OCI의 SP-initiated 인증 흐름을 분석하고 Keycloak과 연동하는 SAML 인증 처리 구조를 개발했습니다.",
-        "troubleshooting": "SAML 요청의 Destination 불일치, 서명 검증 오류, 브라우저 쿠키 정책으로 인한 인증 실패를 분석하고 대응했습니다.",
-        "outcome": "OCI 콘솔 접근을 위한 SAML SSO와 IAM 사용자·그룹·정책 관리 기능을 구현했습니다. 검증 완료 범위와 개선 사항은 확인 후 추가합니다."
+        "technologies": ["Java", "Spring Boot", "OCI Java SDK", "Keycloak", "SingleID", "SAML 2.0", "IAM"],
+        "technologyLabel": "기술 스택:",
+        "summary": [
+          "기존 CAM 시스템의 클라우드 인증·인가 및 리소스 접근 제어 구조를 분석하고, OCI 환경을 지원하도록 기능을 확장했습니다.",
+          "OCI의 Tenancy, Compartment, Identity Domain 구조와 IAM 권한 관리 체계를 분석하여 클라우드 리소스 및 사용자 관리 기능을 개발했습니다.",
+          "또한 OCI Cross-Tenancy Policy의 권한 제약을 해결하기 위한 인증 구조를 구성하고, Keycloak과 SingleID를 활용하여 Identity Domain별 SAML SSO 인증 및 접근 제어 기능을 구현했습니다."
+        ],
+        "sections": [
+          {
+            "title": "주요 구현 기능",
+            "items": [
+              "OCI Java SDK를 활용한 Tenancy·Compartment·Identity Domain 조회 및 관리 기능 개발",
+              "OCI Group·User·Policy 생성 및 IAM 권한 부여 자동화",
+              "Target Tenancy의 API Key 인증을 활용한 OCI 리소스 관리 기능 구현",
+              "OCI Identity Domain별 Keycloak SAML Client 및 Role Mapping을 통한 접근 권한 관리",
+              "Keycloak·SingleID 기반 SAML 2.0 SSO/Federation 연동",
+              "Keycloak Custom Browser Flow를 활용한 SSO 로그인 과정 개선",
+              "CAM 프로젝트별 Identity Domain 및 사용자 관리 기능 개발"
+            ]
+          },
+          {
+            "title": "개발 시 고려 사항",
+            "numbered": true,
+            "items": [
+              "OCI Tenancy·Compartment·Identity Domain의 계층 구조와 IAM 권한 관리 범위",
+              "Cross-Tenancy Policy를 통한 Target Tenancy 리소스 관리 가능 범위 및 권한 제약",
+              "Target Tenancy의 인증 정보를 안전하게 구성하고 OCI SDK 요청에 활용하는 방법",
+              "여러 Identity Domain을 관리할 때 Keycloak Realm을 분리할지, Client·Role 기반으로 접근 권한을 구분할지에 대한 설계",
+              "OCI Identity Domain의 SAML Metadata 및 Entity ID를 활용한 Federation 구성 방식",
+              "SSO 로그인 시 불필요한 계정 설정 및 비밀번호 입력을 제거하기 위한 Keycloak 인증 흐름 구성"
+            ]
+          },
+          {
+            "title": "문제 및 해결 과정",
+            "issues": [
+              {
+                "title": "OCI Cross-Tenancy Policy를 통한 Target Tenancy 관리 권한 제약",
+                "problem": [
+                  "OCI 공식 문서의 Cross-Tenancy Policy를 참고하여 Source Tenancy와 Target Tenancy 간 Endorse·Admit 정책을 구성했습니다.",
+                  "그러나 Source Tenancy의 사용자 인증 정보로 Target Tenancy의 Identity Domain 관련 API를 호출하거나 일부 리소스 생성·관리 작업을 수행할 때 권한 오류가 발생했습니다.",
+                  "Target Tenancy의 로컬 사용자 인증 정보를 사용한 요청은 정상적으로 처리되어, Cross-Tenancy Policy만으로는 필요한 관리 작업을 수행하기 어렵다는 점을 확인했습니다."
+                ],
+                "solutionItems": [
+                  "Source Tenancy의 CAM 사용자에 대한 API Key 공개 키·개인 키 쌍 생성",
+                  "Target Tenancy의 관리자에게 공개 키를 전달하여 Default Identity Domain에 CAM 전용 Group 및 User 구성",
+                  "Target Tenancy의 CAM 사용자에게 필요한 IAM 권한 부여 및 공개 키 등록",
+                  "Target Tenancy 사용자 인증 정보를 기반으로 OCI SDK 요청을 수행하도록 인증 구조 변경"
+                ],
+                "outcome": "이를 통해 Cross-Tenancy Policy에 의존하던 방식에서 Target Tenancy의 로컬 사용자 인증을 활용하는 방식으로 변경하여 필요한 리소스 관리 기능을 구현했습니다."
+              },
+              {
+                "title": "여러 OCI Identity Domain에 대한 Keycloak Federation 관리 구조 설계",
+                "problem": [
+                  "OCI는 하나의 Tenancy 내에서 여러 Identity Domain을 생성할 수 있으며, CAM 프로젝트별로 별도의 Identity Domain을 사용하는 구조가 필요했습니다.",
+                  "초기에는 Identity Domain마다 Keycloak Realm을 생성하여 사용자와 Federation을 분리하는 방식을 검토했습니다.",
+                  "그러나 Realm별로 SingleID와의 Federation 및 Keycloak SAML IdP 설정을 구성해야 하므로, Identity Domain이 증가할수록 설정 및 운영 관리가 복잡해질 수 있었습니다."
+                ],
+                "solutionItems": [
+                  "Identity Domain별 Realm 생성 대신 Keycloak Client·Role을 활용한 접근 제어 구조 설계",
+                  "OCI Identity Domain의 SAML Metadata에서 Entity ID를 확인하고, 이를 기준으로 Keycloak SAML Client 구성",
+                  "Identity Domain별 접근 권한을 구분하기 위한 Client Role 생성",
+                  "사용자에게 해당 Client Role을 Mapping하여 접근 가능한 Identity Domain을 구분",
+                  "OCI·Keycloak·SingleID 간 SAML 2.0 Federation을 구성하여 SSO 인증 흐름 연동"
+                ],
+                "outcome": "이를 통해 Keycloak Realm을 Identity Domain마다 생성하지 않고도, Client와 Role을 활용하여 도메인별 접근 권한을 관리할 수 있도록 구성했습니다."
+              },
+              {
+                "title": "SSO 로그인 과정에서 추가 계정 설정 및 비밀번호 입력 발생",
+                "problem": [
+                  "OCI와 Keycloak, SingleID 간 SSO 인증 흐름을 구성하는 과정에서 사용자가 최초 로그인 시 Keycloak의 계정 정보 설정 화면이나 비밀번호 입력 화면으로 이동하는 문제가 발생했습니다.",
+                  "CAM 및 SingleID에서 이미 인증된 사용자가 다시 계정을 설정하거나 비밀번호를 입력해야 하는 상황이었습니다."
+                ],
+                "solutionItems": [
+                  "Keycloak Authentication 설정에서 Custom Browser Flow 구성",
+                  "Identity Provider Redirector 및 인증 흐름 설정 검토",
+                  "SAML 인증 이후 불필요한 계정 설정 및 비밀번호 입력 과정을 거치지 않도록 인증 흐름 변경",
+                  "기존 CAM·SingleID 인증 정보를 활용하여 OCI SSO 로그인을 진행할 수 있도록 구성"
+                ],
+                "outcome": "이를 통해 사용자가 추가적인 Keycloak 계정 설정 및 비밀번호 입력 없이 SSO 인증을 진행할 수 있도록 개선했습니다."
+              }
+            ]
+          },
+          {
+            "title": "구현 결과",
+            "items": [
+              "OCI Tenancy·Compartment·Identity Domain 기반 리소스 및 IAM 관리 기능 구현",
+              "Target Tenancy의 API Key 인증을 활용한 리소스 생성·관리 기능 개발",
+              "CAM 프로젝트별 Identity Domain 및 사용자 관리 기능 구현",
+              "Keycloak Client·Role Mapping 기반 Identity Domain별 접근 권한 관리 구조 구성",
+              "OCI·Keycloak·SingleID 간 SAML 2.0 SSO/Federation 연동",
+              "Keycloak Custom Browser Flow를 통한 최초 로그인 과정 개선",
+              "OCI Java SDK 기반 Group·User·Policy 생성 및 권한 관리 자동화"
+            ]
+          }
+        ]
       },
       "technologies": [
         "Spring Boot",
@@ -506,7 +608,7 @@ export const camProject = {
         "OCI Java SDK를 활용한 클라우드 콘솔 및 리소스 접근 제어 기능 개발",
         "프로젝트·정책·사용자 생성 및 권한 부여 기능 개발",
         "OCI Compartment, Identity Domain, 사용자 및 정책 관리 기능 개발",
-        "OCI Group, User, Policy 생성을 통한 IAM 권한 관리 자동화"
+        "OCI Group, User, Policy 생성을 통한 IAM 권한 관리 자동화 (진행중)"
       ]
     }
   ],
