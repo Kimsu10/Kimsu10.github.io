@@ -20,7 +20,7 @@ export const education = [
   },
   {
     "school": "wecode",
-    "period": "2023.06 ~ 2025.08",
+    "period": "2023.06 ~ 2023.08",
     "status": "수료",
     "details": [
       "React 기반 프론트엔드 과정"
@@ -46,6 +46,6 @@ export const education = [
 ]
 
 export const certifications = [
-  { id: 'ncp', name: 'NCP', fullName: 'Naver Cloud Professional', date: '2024.10', image: professionalImage },
-  { id: 'nca', name: 'NCA', fullName: 'Naver Cloud Associate', date: '2024.08', image: associateImage },
+  { id: 'ncp', name: 'NCP', fullName: 'Naver Cloud Platform Certified Professional', date: '2024.10', image: professionalImage },
+  { id: 'nca', name: 'NCA', fullName: 'Naver Cloud Platform Certified Associate', date: '2024.08', image: associateImage },
 ]

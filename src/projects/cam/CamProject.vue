@@ -33,7 +33,7 @@ const activeExplanation = ref(null)
                 <span class="project-overview-title">{{ work.title }}</span>
               </li>
             </ul>
-            <h4 class="project-additional-heading">그 외 경험</h4>
+            <h4 class="project-additional-heading">추가 개발 및 운영 경험</h4>
             <ul class="project-contributions">
               <li v-for="experience in camProject.additionalExperience" :key="experience">
                 {{ experience }}

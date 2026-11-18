@@ -15,7 +15,7 @@ import proseMirrorImage from '../../images/proseMirror.png'
             <span class="project-story-client">/ medistream · 2023.07 ~ 2023.08</span>
           </div>
           <h3>medistream · ProseMirror 에디터 플러그인 고도화</h3>
-          <p>제목·본문 스타일 중심의 기존 에디터에 세부 글자 크기 선택 기능을 추가하고, 일반 텍스트와 테이블 셀에서 일관된 편집 경험을 제공하는 플러그인을 개발했습니다.</p>
+          <p>기존 ProseMirror 기반 에디터에 글자 크기 조절 기능을 추가하고, 일반 텍스트 및 테이블 셀의 편집 동작을 개선했습니다.</p>
           <div class="tag-list">
             <span v-for="tag in medistreamProject.tags" :key="tag" class="tag">{{ tag }}</span>
           </div>

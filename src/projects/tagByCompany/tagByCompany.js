@@ -3,7 +3,7 @@ export const tagByCompanyProject = {
   "period": "2022.12.09 ~ 2023.01.08",
   "team": "FE 2명 · BE 2명",
   "position": "Backend",
-  "description": "계약된 인플루언서의 광고가 인기 순위에 노출되는지 정기적으로 확인하고, 스크린샷을 남기는 반복 업무를 자동화하여 담당 직원의 업무 효율을 높이기 위한 서비스입니다.",
+  "description": "계약된 인플루언서의 광고 콘텐츠 노출 순위를 주기적으로 확인하고, 결과 화면을 자동으로 수집·저장하는 모니터링 시스템을 개발했습니다.",
   "tags": [
     "Node.js",
     "Express",
@@ -20,7 +20,7 @@ export const tagByCompanyProject = {
       "period": "2022.12.09 ~ 2022.12.15"
     },
     {
-      "title": "스케줄러 기반 업무 자동화",
+      "title": "스케줄러 기반 광고 모니터링 자동화",
       "details": [
         "node-cron과 schedule을 활용하여 정해진 시간마다 모니터링 작업 실행",
         "DB에서 스케줄러의 실행 여부와 상태를 확인하고, 상태가 working인 경우 작업 수행",

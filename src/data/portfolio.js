@@ -3,27 +3,28 @@ import { ShieldCheck, Terminal, Server, Cloud } from 'lucide-vue-next'
 export const profile = {
   name: '김수정',
   role: 'DevOps',
-  intro: '기존 시스템을 먼저 이해하고 개선하는 개발자',
-  description: '다양한 클라우드 SDK와 SSO 페더레이션을 연동하고, 자원 등록·접속 기능을 확장했습니다.\n기능 구현에 그치지 않고, 코드의 가독성과 유지보수성을 고려하여 누구나 쉽게 이해하고 개선할 수 있는 구조를 지향합니다',
+  intro: '기존 시스템의 구조를 이해하고 개선하는 개발자',
+  description: '다양한 클라우드 SDK를 활용하고 SSO/Federation을 연동하여, 리소스 등록 및 접근 제어 기능을 개발했습니다.\n단순한 기능 구현을 넘어 코드의 가독성과 유지보수성을 고려하며, 변화에 유연하게 대응할 수 있는 구조를 고민합니다.',
   email: 'betnwjd25@gmail.com',
   github: 'https://github.com/Kimsu10',
 }
 export const navigation = ['About', 'Skills', 'Experience', 'Projects', 'Contact']
 export const skillGroups = [
-  { name: 'Backend', skills: ['Java', 'Spring Boot', 'Node.js', 'Express', 'REST API', 'Spring Scheduler', 'MyBatis', 'MySQL', 'PostgreSQL'] },
+  { name: 'Backend', skills: ['Java', 'Spring Boot', 'Node.js', 'Express', 'MyBatis', 'MySQL', 'PostgreSQL'] },
   { name: 'Frontend', skills: ['JavaScript', 'TypeScript', 'Vue 3', 'Pinia', 'React', 'HTML / CSS'] },
-  { name: 'Cloud & Identity', skills: ['AWS', 'GCP', 'Azure', 'OCI', 'Keycloak', 'SAML 2.0', 'IAM'] },
-  { name: 'Infrastructure', skills: ['Git', 'Linux', 'SSH', 'Jenkins', 'Docker', 'Kubernetes', 'Argo CD' ] },
+  { name: 'Cloud & Identity', skills: ['AWS', 'GCP', 'Azure', 'OCI', 'Keycloak'] },
+  { name: 'Infrastructure', skills: ['Git', 'Linux', 'SSH', 'Jenkins', 'Docker', 'Kubernetes', 'Argo CD', 'Helm' ] },
 ]
 export const experiences = [
   { date: '2025.06 ~ 현재',
     role: '삼성SDS 클라우드 접근 관리 시스템 개발',
     company: '와글와이즈 · 정규직/풀스택',
-    description: 'Vue 3와 Spring Boot 기반 관리 플랫폼 개발 및 멀티 클라우드 접근 제어 시스템 구현',
+    description: 'Spring Boot와 Vue 3 기반 클라우드 접근 관리 시스템 개발 및 고도화',
     details: [
-      'Vue 3·Spring Boot 기반 관리자 페이지 및 REST API 개발',
-      'GCP·OCI 콘솔 SSO/Federation 및 리소스 접근 제어 시스템 구축',
-      'SSH 터널링 및 계정 관리 자동화를 통한 Multi-Enrollment 기능 개발',
+      'Spring Boot와 Vue 3 기반 관리자 페이지 및 REST API 개발',
+      'GCP·OCI SSO/Federation 연동 및 IAM·리소스 접근 제어 기능 구현',
+      'AWS·Azure 리소스 접근 제어 및 계정 관리 기능 유지보수',
+      '이중 SSH 터널링과 계정 관리 자동화를 통한 멀티 클라우드 리소스 접근 기능 개발',
     ],
     tags: ['Spring Boot', 'Vue 3', 'AWS', 'Azure', 'GCP', 'SCP', 'OCI', 'Linux', 'SSH', 'Jenkins', 'Kubernetes', 'Git', 'Argo CD', 'MyBatis', 'MySQL', 'PostgreSQL' ] },
   {
@@ -73,7 +74,7 @@ export const camProject = {
   "contributions": [
     {
       "title": "관리자 페이지 및 QnA, FAQ, 공지사항 API 및 화면 구현",
-      "period": "2025.07 ~ 2025.08",
+      "period": "2025.06 ~ 2025.08",
       "technologies": [
         "Vue 3",
         "Spring Boot",
@@ -159,7 +160,7 @@ export const camProject = {
     },
     {
       "title": "OCI 콘솔 및 리소스 접근 제어 시스템 구축",
-      "period": "2026.10 ~ 2026.12 (진행중)",
+      "period": "2026.10 ~ 진행중",
       "technologies": [
         "Spring Boot",
         "OCI Java SDK",
@@ -198,6 +199,6 @@ export const camProject = {
   "additionalExperience": [
     "커스텀 어노테이션(@EncryptTarget, @DecryptTarget)을 활용한 개인정보 암·복호화 처리",
     "사내 데이터베이스 v1.3.0 → v1.4.0 마이그레이션 수행",
-    "Jenkins를 사용한 배포 경험"
+    "Jenkins 기반 애플리케이션 배포"
   ]
 }
