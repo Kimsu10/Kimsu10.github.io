@@ -2,9 +2,9 @@ import { ShieldCheck, Terminal, Server, Cloud } from 'lucide-vue-next'
 
 export const profile = {
   name: '김수정',
-  role: 'DevOps',
-  intro: '기존 시스템의 구조를 이해하고 개선하는 개발자',
-  description: '다양한 클라우드 SDK를 활용하고 SSO/Federation을 연동하여, 리소스 등록 및 접근 제어 기능을 개발했습니다.\n단순한 기능 구현을 넘어 코드의 가독성과 유지보수성을 고려하며, 변화에 유연하게 대응할 수 있는 구조를 고민합니다.',
+  role: '풀스택 개발자',
+  // intro: '기존 시스템의 구조를 이해하고 개선하는 개발자',
+  description: '다양한 클라우드 SDK를 활용하고 SSO/Federation을 연동하여, 리소스 등록 및 접근 제어 기능을 개발했습니다.\n그 과정에서 기존 시스템의 흐름을 먼저 이해하고, 백엔드에서는 클라우드별 처리 로직과 공통 로직을 분리하여 처리하고,\n 프론트엔드에서는 재사용 가능한 컴포넌트와 공통 필터링·검증 로직을 구성하여 코드의 재사용성과 유지보수성을 높이고자 했습니다.\n',
   email: 'betnwjd25@gmail.com',
   github: 'https://github.com/Kimsu10',
 }
@@ -21,7 +21,7 @@ export const experiences = [
     company: '와글와이즈 · 정규직/풀스택',
     description: 'Spring Boot와 Vue 3 기반 클라우드 접근 관리 시스템 개발 및 고도화',
     details: [
-      'Spring Boot와 Vue 3 기반 공지사항 및 게시판 기능 구현 및 고도화',
+      '공지사항 및 게시판 기능 개발 및 개선',
       'GCP·OCI SSO/Federation 연동 및 IAM·리소스 접근 제어 기능 구현',
       'AWS·Azure 리소스 접근 제어 및 계정 관리 기능 고도화 및 유지보수',
       '이중 SSH 터널링과 계정 관리 자동화를 통한 멀티 클라우드 리소스 접근 기능 개발',
@@ -147,7 +147,6 @@ export const camProject = {
         "Radix Vue 기반 관리자 페이지 UI 및 Spring Boot 백엔드 기능 개발",
         "QnA, FAQ, 공지사항 기능 및 REST API 구현",
         "이미지/파일 업로드, 미리보기 및 다운로드 기능 구현",
-        "Kubernetes 및 Argo CD를 활용한 서비스 배포 및 운영 관리"
       ]
     },
     {
@@ -244,8 +243,8 @@ export const camProject = {
       "title": "AWS EC2·RDS 자원 접근 제어와 계정 관리 기능 고도화",
       "period": "2026.01 ~ 2026.03",
       "process": {
-        "title": "AWS·Azure 클라우드 리소스 등록 및 접근 제어 기능 고도화",
-        "technologies": ["Java", "Spring Boot", "Vue 3", "SSHJ", "Azure SDK", "Linux", "PostgreSQL", "MyBatis", "JUnit"],
+        "title": "AWS EC2·RDS 자원 접근 제어와 계정 관리 기능 고도화",
+        "technologies": ["Java", "Spring Boot", "Vue 3", "SSHJ", "Linux", "PostgreSQL", "MyBatis", "JUnit"],
         "technologyLabel": "기술 스택:",
         "summary": [
           "기존 비밀번호 기반 관리자 인증에 PEM형식의 SSH 개인키 인증을 추가하고, 이중 경유 SSH 터널링과 계정 관리 자동화를 구현했습니다.",
@@ -570,15 +569,15 @@ export const camProject = {
                 "title": "SSO 로그인 과정에서 추가 계정 설정 및 비밀번호 입력 발생",
                 "problem": [
                   "OCI와 Keycloak, SingleID 간 SSO 인증 흐름을 구성하는 과정에서 사용자가 최초 로그인 시 Keycloak의 계정 정보 설정 화면이나 비밀번호 입력 화면으로 이동하는 문제가 발생했습니다.",
-                  "CAM 및 SingleID에서 이미 인증된 사용자가 다시 계정을 설정하거나 비밀번호를 입력해야 하는 상황이었습니다."
+                  "이후 CAM 및 SingleID에서 이미 인증된 사용자가 다시 계정을 설정하거나 비밀번호를 입력해야 하는 상황이 발생하였습니다."
                 ],
                 "solutionItems": [
+                  "OCI 콘솔과 Keycloak 로그를 통한 Identity Provider Redirector 및 인증 흐름 설정 검토",
                   "Keycloak Authentication 설정에서 Custom Browser Flow 구성",
-                  "Identity Provider Redirector 및 인증 흐름 설정 검토",
                   "SAML 인증 이후 불필요한 계정 설정 및 비밀번호 입력 과정을 거치지 않도록 인증 흐름 변경",
                   "기존 CAM·SingleID 인증 정보를 활용하여 OCI SSO 로그인을 진행할 수 있도록 구성"
                 ],
-                "outcome": "이를 통해 사용자가 추가적인 Keycloak 계정 설정 및 비밀번호 입력 없이 SSO 인증을 진행할 수 있도록 개선했습니다."
+                "outcome": "위 과정을 통해 사용자가 추가적인 Keycloak 계정 설정 및 비밀번호 입력 없이 SSO 인증을 진행할 수 있도록 개선했습니다."
               }
             ]
           },
@@ -633,7 +632,7 @@ export const camProject = {
   ],
   "additionalExperience": [
     "커스텀 어노테이션(@EncryptTarget, @DecryptTarget)을 활용한 개인정보 암·복호화 처리",
-    "사내 데이터베이스 v1.3.0 → v1.4.0 마이그레이션 수행",
-    "Jenkins 기반 애플리케이션 배포"
+    "사내 애플리케이션 버전 업그레이드에 따른 DB 스키마 및 데이터 마이그레이션 수행",
+    "Jenkins를 활용한 애플리케이션 배포 및 Kubernetes 환경에서의 서비스 운영·유지보수"
   ]
 }

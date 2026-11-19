@@ -48,14 +48,14 @@ const activePage = ref(0)
         </p>
 
         <p>
-          개발 과정에서는 <strong>Factory 패턴</strong>을 활용해
-          <strong>CSP별 SDK 클라이언트 생성 책임을 분리</strong>하고,
-          공통 로직의 재사용성을 높였습니다.
+          개발 과정에서는 <strong>Factory 패턴과 Singleton 패턴</strong>을 활용해
+          <strong>CSP별 SDK Client 생성 책임을 분리</strong>하고,
+         객체의 재사용성을 높였습니다.
         </p>
 
         <p>
           또한 인증, 리소스 관리, 데이터 접근 등
-          <strong>기능별 책임을 분리</strong>하여
+          <strong>기능별로 책임을 분리</strong>하여
           변경에 따른 영향을 줄이고 유지보수가 용이한 구조를 만들고자 했습니다.
         </p>
 

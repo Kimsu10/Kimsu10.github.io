@@ -1,15 +1,15 @@
 <script setup>
-import { ShieldCheck, Cloud, Terminal, PanelsTopLeft, Shield } from 'lucide-vue-next'
+import { CloudCog, CodeXml, Copy, Puzzle, Shield } from 'lucide-vue-next'
 import { profile } from '../data/portfolio'
 import { useSectionNavigation } from '../composables/useSectionNavigation'
 
 const { goTo } = useSectionNavigation()
 
 const specialties = [
-  { label: 'Identity & SSO', icon: ShieldCheck, angle: '-140deg', counterAngle: '140deg' },
-  { label: 'Cloud Access Control', icon: Cloud, angle: '-30deg', counterAngle: '30deg' },
-  { label: 'Scalable Backend', icon: Terminal, angle: '140deg', counterAngle: '-140deg' },
-  { label: 'Intuitive UI', icon: PanelsTopLeft, angle: '60deg', counterAngle: '-60deg' },
+  { label: 'Cloud Integration', icon: CloudCog, angle: '-140deg', counterAngle: '140deg' },
+  { label: 'Clean Code', icon: CodeXml, angle: '-30deg', counterAngle: '30deg' },
+  { label: 'Reusability', icon: Copy, angle: '140deg', counterAngle: '-140deg' },
+  { label: 'Extensibility', icon: Puzzle, angle: '60deg', counterAngle: '-60deg' },
 ]
 </script>
 
@@ -23,7 +23,7 @@ const specialties = [
 <!--        </span> 구직중 </div>-->
       <div class="eyebrow">안녕하세요, 개발자 김수정입니다</div>
       <h1>구조를 이해하고<br>
-        <span class="gradient-text">변화를 만듭니다</span>
+        <span class="gradient-text">개선하는 개발자</span>
       </h1>
       <h2>{{ profile.intro }}</h2>
       <p class="hero-description">{{ profile.description }}</p>
@@ -57,7 +57,7 @@ const specialties = [
       </div>
       <div class="art-center">
         <div class="art-logo"><Shield :size="68" :stroke-width="1.4" /></div>
-        <span>BUILD WITH CLARITY</span>
+        <span>BUILD BETTER</span>
       </div>
       <div
         v-for="specialty in specialties"
